@@ -32,37 +32,141 @@
     <!-- ================= HOME VIEW ================= -->
     <div id="home-view">
       <!-- Header & Quick Intro -->
-      <header class="border-b border-zinc-200 pb-8 mb-10 max-w-3xl">
-        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
-          Sopheakdey (Dey) Bov
-        </h1>
-        <p class="mt-2 text-base sm:text-lg text-zinc-600 font-medium">
-          B.S. in Electrical &amp; Computer Engineering &bull; University of Rochester (Expected May 2027)
-        </p>
+      <header class="border-b border-zinc-200 pb-8 mb-10 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-8">
+        
+        <!-- Left Column: Text & Links -->
+        <div class="max-w-2xl">
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
+            Sopheakdey (Dey) Bov
+          </h1>
+          <p class="mt-2 text-base sm:text-lg text-zinc-600 font-medium">
+            B.S. in Electrical &amp; Computer Engineering &bull; University of Rochester (Expected May 2027)
+          </p>
 
-        <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
-          I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous motion planning. My work spans building modular hardware and power electronics in <strong>KiCad</strong> to developing real-time <strong>C++ and ROS 2</strong> navigation and control stacks for field rovers, robotic manipulators, and off-grid RF systems.
-        </p>
+          <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
+            I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous motion planning. My work spans building modular hardware and power electronics in <strong>KiCad</strong> to developing real-time <strong>C++ and ROS 2</strong> navigation and control stacks for field rovers, robotic manipulators, and off-grid RF systems.
+          </p>
 
-        <!-- Simple Contact Links -->
-        <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-blue-600">
-          <a href="mailto:sbov@u.rochester.edu" class="hover:underline">sbov@u.rochester.edu</a>
-          <span class="text-zinc-300">&bull;</span>
-          <a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
-          <span class="text-zinc-300">&bull;</span>
-          <a href="https://canva.link/m6uo72muz9tcho7" target="_blank" rel="noopener" class="hover:underline">Hardware Photo Slides</a>
-          <span class="text-zinc-300">&bull;</span>
-          <span class="text-zinc-600 font-normal">(585) 957-5196</span>
+          <!-- Simple Contact Links -->
+          <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-blue-600">
+            <a href="mailto:sbov@u.rochester.edu" class="hover:underline">sbov@u.rochester.edu</a>
+            <span class="text-zinc-300">&bull;</span>
+            <a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+            <span class="text-zinc-300">&bull;</span>
+            <a href="https://canva.link/m6uo72muz9tcho7" target="_blank" rel="noopener" class="hover:underline">Hardware Photo Slides</a>
+            <span class="text-zinc-300">&bull;</span>
+            <span class="text-zinc-600 font-normal">(585) 957-5196</span>
+          </div>
         </div>
+
+        <!-- Right Column: Profile Picture -->
+        <div class="shrink-0">
+          <img 
+            src="images/profile.jpg" 
+            alt="Sopheakdey (Dey) Bov" 
+            class="w-50 h-50 sm:w-44 sm:h-44 object-cover border border-zinc-200 shadow-sm bg-zinc-100"
+          />
+        </div>
+
       </header>
 
-      <!-- Projects Grid Section -->
-      <section>
-        <h2 class="text-xl font-bold text-zinc-900 mb-6">Projects &amp; Research</h2>
+      <!-- Experiences Grid Section -->
+      <section class="mb-12">
+        <h2 class="text-xl font-bold text-zinc-900 mb-6">Experiences</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <!-- Project 1: UR Robotics -->
+          <!-- Experience 1: Nicslab Internship -->
+          <article onclick="openProject('nicslab')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY</span>
+                <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
+              </div>
+              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
+                Electrical Engineering Intern
+              </h3>
+              <p class="text-xs font-medium text-zinc-500 mt-0.5">
+                Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
+              </p>
+              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
+                Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in replacement costs. Established a Factory Acceptance Testing (FAT) facility from scratch with high-precision DMMs and configured headless SSH diagnostics.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
+              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">PCB Diagnostics</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">SMUs &amp; DMMs</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">Linux / SSH</span>
+              </div>
+              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Experience 2: Summer Research RAIL -->
+          <article onclick="openProject('rail-research')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-baseline justify-between gap-2 mb-1">
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">RAIL Lab (Prof. Thomas Howard)</span>
+                <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
+              </div>
+              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
+                Undergraduate Robotics Researcher
+              </h3>
+              <p class="text-xs font-medium text-zinc-500 mt-0.5">
+                Kinodynamic Multi-Robot Motion Planning with State Lattices
+              </p>
+              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
+                Built a C++ ROS 2 kinodynamic motion planning package for a Clearpath Husky rover. Developed an offline state-lattice generator using a Model-Predictive Trajectory Generation (MPTG) shooting method and accelerated online A* obstacle checks using 64-bit bitmask collision detection in RViz2.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
+              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">C++</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">ROS 2</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">RViz2</span>
+              </div>
+              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Projects Grid Section -->
+      <section>
+        <h2 class="text-xl font-bold text-zinc-900 mb-6">Projects</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Project 1: Senior Design (In Progress) -->
+          <article onclick="openProject('senior-design')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Senior Design Capstone (ECE 348)</span>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  In Progress
+                </span>
+              </div>
+              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
+                Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
+              </h3>
+              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
+                Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping. Architecting high-current power electronics, custom KiCad distribution and driver PCBs, embedded control firmware, and an NVIDIA Jetson ROS 2 mapping pipeline.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
+              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">Power Electronics</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">KiCad</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">Jetson / ROS 2</span>
+              </div>
+              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Project 2: UR Robotics -->
           <article onclick="openProject('ur-robotics')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
@@ -86,55 +190,7 @@
             </div>
           </article>
 
-          <!-- Project 2: Summer Research RAIL -->
-          <article onclick="openProject('rail-research')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">RAIL Lab (Prof. Thomas Howard)</span>
-                <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
-              </div>
-              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
-                Kinodynamic Multi-Robot Motion Planning with State Lattices
-              </h3>
-              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Built a C++ ROS 2 kinodynamic motion planning package for a Clearpath Husky rover. Developed an offline state-lattice generator using a Model-Predictive Trajectory Generation (MPTG) shooting method and accelerated online A* obstacle checks using 64-bit bitmask collision detection in RViz2.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">C++</span>
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">ROS 2</span>
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">RViz2</span>
-              </div>
-              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
-            </div>
-          </article>
-
-          <!-- Project 3: Nicslab Internship -->
-          <article onclick="openProject('nicslab')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
-            <div>
-              <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Nicslab Ops, Inc.</span>
-                <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
-              </div>
-              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
-                Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
-              </h3>
-              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in replacement costs. Designed a custom SMD resistor load PCB and built a Factory Acceptance Testing (FAT) facility with high-precision DMMs and headless SSH diagnostics.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">PCB Diagnostics</span>
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">SMUs &amp; DMMs</span>
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">Linux / SSH</span>
-              </div>
-              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
-            </div>
-          </article>
-
-          <!-- Project 4: LoRa Tracker -->
+          <!-- Project 3: LoRa Tracker -->
           <article onclick="openProject('lora-tracker')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
@@ -158,7 +214,7 @@
             </div>
           </article>
 
-          <!-- Project 5: 6-DOF Robotic Arm -->
+          <!-- Project 4: 6-DOF Robotic Arm -->
           <article onclick="openProject('robotic-arm')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
@@ -182,7 +238,7 @@
             </div>
           </article>
 
-          <!-- Project 6: Drone & PIC32 Mechatronics -->
+          <!-- Project 5: Drone & PIC32 Mechatronics -->
           <article onclick="openProject('drone-mechatronics')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
@@ -215,7 +271,7 @@
         <div class="text-sm text-zinc-700 space-y-1.5">
           <p><strong>Programming &amp; Robotics:</strong> C, C++, Python, ROS 2, Gazebo, RViz2, Linux, Git, MATLAB</p>
           <p><strong>Embedded &amp; Hardware:</strong> KiCad, Altium Designer, STM32, Teensy 4.1, PIC32MX, ESP32, Arduino, MPLAB X, UART, I2C, SPI, CAN Bus</p>
-          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, LTspice, SolidWorks, Solid Edge, Fusion 360, Machining (Lathe/Bandsaw)</p>
+          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, HSPICE / LTspice, SolidWorks, Solid Edge, Fusion 360, Machining (Lathe/Bandsaw)</p>
         </div>
       </section>
     </div>
@@ -223,10 +279,73 @@
 
     <!-- ================= SUB-PAGE VIEWS (DETAILED WRITE-UPS) ================= -->
 
+    <!-- SUB-PAGE 0: SENIOR DESIGN (IN PROGRESS) -->
+    <div id="page-senior-design" class="project-subpage hidden">
+      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+        &larr; Back to portfolio
+      </button>
+
+      <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
+        <header class="border-b border-zinc-200 pb-5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">ECE 348 Senior Design Capstone &bull; University of Rochester &bull; Sep 2026 – Present</p>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              In Progress
+            </span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
+            Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
+          </h1>
+          <p class="text-sm text-zinc-600 mt-2">
+            <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware &bull; <strong>Tech Stack:</strong> KiCad, HSPICE, NVIDIA Jetson, ROS 2, C++, Embedded Microcontrollers
+          </p>
+        </header>
+
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">Project Overview</h2>
+          <p>
+            Inspecting vertical infrastructure and navigating obstructed, multi-plane environments poses a major challenge for conventional ground rovers. For our senior design capstone, we are developing an <strong>autonomous wall-climbing mapping robot</strong> capable of transitioning onto and traversing vertical surfaces while executing real-time 3D terrain mapping.
+          </p>
+        </section>
+
+        <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">Current Engineering Scope &amp; Architecture</h2>
+
+          <div>
+            <h3 class="font-semibold text-zinc-900">1. Power Electronics &amp; Custom KiCad PCB Design</h3>
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+              <li>Architecting a high-current power delivery and regulation system capable of sustaining active wall-adhesion actuators and drive motors simultaneously without inducing brownouts on the compute rails.</li>
+              <li>Simulating analog power stages in <strong>HSPICE</strong> and designing custom power distribution and motor control PCBs in <strong>KiCad</strong> with isolated logic and high-current copper pours.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-zinc-900">2. Embedded Firmware &amp; Closed-Loop Locomotion Control</h3>
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+              <li>Developing low-level embedded C/C++ firmware to coordinate drive actuation, adhesion force regulation, and IMU/encoder feedback loops for stable vertical climbing.</li>
+              <li>Implementing deterministic serial communication between the low-level microcontroller and the high-level onboard computer.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-zinc-900">3. NVIDIA Jetson &amp; ROS 2 3D Terrain Mapping</h3>
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+              <li>Integrating an <strong>NVIDIA Jetson</strong> compute module running <strong>ROS 2</strong> to fuse depth/LiDAR and inertial telemetry into a real-time 3D spatial map of vertical and complex surfaces.</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+        &larr; Back to portfolio
+      </button>
+    </div>
+
     <!-- SUB-PAGE 1: UR ROBOTICS -->
     <div id="page-ur-robotics" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
@@ -304,14 +423,14 @@
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 2: SUMMER RESEARCH (RAIL LAB) -->
     <div id="page-rail-research" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
@@ -374,31 +493,31 @@
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 3: NICSLAB INTERNSHIP -->
     <div id="page-nicslab" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
           <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY &bull; May 2026 – Aug 2026</p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Multichannel SMU Hardware Diagnostics, Custom Load PCB &amp; FAT Station
+            Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Electrical Engineering Intern &bull; <strong>Tech Stack:</strong> Multichannel SMUs, KiCad, High-Precision DMMs, Oscilloscopes, Linux / SSH
+            <strong>Role:</strong> Electrical Engineering Intern &bull; <strong>Tech Stack:</strong> Multichannel SMUs, High-Precision DMMs, Oscilloscopes, Linux / SSH
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Overview</h2>
           <p>
-            During my summer internship at Nicslab Ops, Inc., I focused on hardware diagnostics, board-level rework, and automated quality assurance for high-density multichannel Source Measure Units (SMUs) and XDAC controller boards used in photonics and semiconductor testing.
+            During my summer internship at Nicslab Ops, Inc., I focused on component-level hardware diagnostics, board rework, and Factory Acceptance Testing (FAT) infrastructure for high-density multichannel Source Measure Units (SMUs) and XDAC controller boards used in photonics and semiconductor testing.
           </p>
         </section>
 
@@ -406,22 +525,21 @@
           <h2 class="text-lg font-bold text-zinc-900">Engineering Contributions</h2>
           <ul class="list-disc pl-5 space-y-2">
             <li><strong>Component-Level Fault Triage ($40,000+ Saved):</strong> Diagnosed hardware faults on field-returned multichannel SMU and XDAC boards, isolating and resolving PCB thermal damage, voltage spikes, and inverted current draws to save over $40,000 in replacement hardware costs.</li>
-            <li><strong>Custom SMD Resistor Validation PCB:</strong> Designed a custom PCB featuring precision surface-mount resistors and pin header arrays to interface directly with multichannel SMUs for repeatable channel-by-channel load testing.</li>
-            <li><strong>Factory Acceptance Testing (FAT) Facility:</strong> Built a comprehensive FAT test station from scratch, integrating benchtop DMMs, oscilloscopes, and custom calibration fixtures to standardize hardware sign-off prior to shipment.</li>
+            <li><strong>Factory Acceptance Testing (FAT) Facility:</strong> Built a comprehensive FAT test station from scratch, integrating high-precision benchtop DMMs, oscilloscopes, and custom calibration fixtures to standardize hardware sign-off prior to shipment.</li>
             <li><strong>Headless Linux &amp; SSH Diagnostics:</strong> Configured network interfaces and SSH protocols for embedded hardware units, enabling headless device management and automated diagnostic data retrieval.</li>
           </ul>
         </section>
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 4: LORA TRACKER -->
     <div id="page-lora-tracker" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
@@ -446,14 +564,14 @@
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 5: 6-DOF ROBOTIC ARM -->
     <div id="page-robotic-arm" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
@@ -478,14 +596,14 @@
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 6: DRONE & MECHATRONICS -->
     <div id="page-drone-mechatronics" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
@@ -519,7 +637,7 @@
       </article>
 
       <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to all projects
+        &larr; Back to portfolio
       </button>
     </div>
 
