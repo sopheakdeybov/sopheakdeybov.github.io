@@ -1,0 +1,13 @@
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fafafa;
+  color: #18181b;
+}
+.project-card {
+  transition: all 0.15s ease;
+}
+.project-card:hover {
+  border-color: #a1a1aa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class = "scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,28 +9,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #fafafa;
-      color: #18181b;
-    }
-    .project-card {
-      transition: all 0.15s ease;
-    }
-    .project-card:hover {
-      border-color: #a1a1aa;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased selection:bg-blue-100 selection:text-blue-900">
+ 
+  <!-- ================= FIXED NAVIGATION BAR ================= -->
+  <nav class="sticky top-0 z-50 bg-[#fafafa]/80 backdrop-blur-md border-b border-zinc-200">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" onclick="goHome(); return false;" class="font-bold text-zinc-900 hover:text-blue-600 transition-colors">Sopheakdey Bov</a>
+      <div class="flex gap-4 sm:gap-6 text-sm font-medium text-zinc-600">
+        <a href="#" onclick="goHome(); return false;" class="hover:text-blue-600 transition-colors">Home</a>
+        <a href="#experiences" class="hover:text-blue-600 transition-colors">Experiences</a>
+        <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+        <a href="#teaching" class="hover:text-blue-600 transition-colors hidden sm:block">Teaching</a>
+      </div>
+    </div>
+  </nav>
 
   <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
 
     <!-- ================= HOME VIEW ================= -->
-    <div id="home-view">
+    <div id="home-view" class="scroll-mt-28">
       <!-- Header & Quick Intro -->
       <header class="border-b border-zinc-200 pb-8 mb-10 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-8">
         
@@ -44,7 +43,7 @@
           </p>
 
           <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
-            I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous motion planning. My work spans building modular hardware and power electronics in <strong>KiCad</strong> to developing real-time <strong>C++ and ROS 2</strong> navigation and control stacks for field rovers, robotic manipulators, and off-grid RF systems.
+              I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous motion planning. My work spans from building modular hardware and power electronics in KiCad to developing C++ and ROS2 systems for robotics applications like motion planning and manipulator control. I also do enjoy the hardware side of things like wiring and debugging systems, soldering components, and writing low-level code for motor, actuator, and encoder interfaces.
           </p>
 
           <!-- Simple Contact Links -->
@@ -64,14 +63,14 @@
           <img 
             src="images/profile.JPG" 
             alt="Sopheakdey (Dey) Bov" 
-            class="w-50 h-50 sm:w-44 sm:h-44 object-cover border border-zinc-200 shadow-sm bg-zinc-100"
+            class="w-[252px] h-[252px] sm:w-[300px] sm:h-[300px] object-cover border border-zinc-200 shadow-sm bg-zinc-100"
           />
         </div>
 
       </header>
 
       <!-- Experiences Grid Section -->
-      <section class="mb-12">
+      <section id="experiences" class="mb-12 scroll-mt-32">
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Experiences</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +133,7 @@
       </section>
 
       <!-- Projects Grid Section -->
-      <section>
+      <section id="projects" class = "scroll-mt-20">
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Projects</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -143,7 +142,7 @@
           <article onclick="openProject('senior-design')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center justify-between gap-2 mb-1.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Senior Design Capstone (ECE 348)</span>
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Senior Design Capstone (Ideation Stage)</span>
                 <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   In Progress
@@ -153,15 +152,15 @@
                 Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping. Architecting high-current power electronics, custom KiCad distribution and driver PCBs, embedded control firmware, and an NVIDIA Jetson ROS 2 mapping pipeline.
+                Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping. Architecting power electronics, custom  distribution and driver PCBs, embedded control firmware, and ROS 2 mapping pipeline.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">Power Electronics</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">KiCad</span>
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">Jetson / ROS 2</span>
-              </div>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">ROS 2</span>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -265,8 +264,45 @@
         </div>
       </section>
 
+
+      <!-- Teaching & Leadership Section -->
+      <section id="teaching" class="mt-12 pt-8 border-t border-zinc-200 scroll-mt-20">
+        <h2 class="text-xl font-bold text-zinc-900 mb-6">Teaching &amp; Leadership</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Teaching Assistant -->
+          <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="text-base font-semibold text-zinc-900">ECE Teaching Assistant &amp; Workshop Leader</h3>
+              <span class="text-xs text-zinc-500">Aug 2025 – Present</span>
+            </div>
+            <p class="text-xs font-medium text-blue-600 mb-3">University of Rochester</p>
+            <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
+              <li><strong>ECE 216 (Mechatronics &amp; Embedded Systems):</strong> Facilitate lab sessions guiding students through Arduino hardware integration, timer interrupts, motor controls, and SPI communication.</li>
+              <li><strong>ECE 113 (Circuits &amp; Signals):</strong> Lead problem-solving workshops covering more advanced version of topics from 101, introducing frequency domain of time signals, phasor, and non linear circuit analysis using loadlines.</li>
+              <li><strong>ECE 101 (Introduction to Electrical and Computer Engineering):</strong> Lead problem-solving workshops for 40+ students covering fundamental circuitry, logic design, and signals.</li>
+            </ul>
+          </div>
+
+          <!-- STEM Outreach (UNICEF) -->
+          <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="text-base font-semibold text-zinc-900">Lead Content &amp; Material Manager</h3>
+              <span class="text-xs text-zinc-500">May 2022 – Feb 2023</span>
+            </div>
+            <p class="text-xs font-medium text-blue-600 mb-3">UNICEF "Generation Future" &bull; Cambodia</p>
+            <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
+              <li>Secured a $2,000 UNICEF grant by authoring a detailed project proposal to fund STEM education outreach.</li>
+              <li>Organized and led 6 hands-on workshops across two provinces for 200+ young women, teaching mechanical advantage and engineering fundamentals.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
       <!-- Compact Technical Skills Footer -->
-      <section class="mt-12 pt-8 border-t border-zinc-200 max-w-3xl">
+      <section id="skills" class="mt-12 pt-8 border-t border-zinc-200 max-w-3xl scroll-mt-20">
         <h2 class="text-base font-bold text-zinc-900 mb-3">Technical Skills</h2>
         <div class="text-sm text-zinc-700 space-y-1.5">
           <p><strong>Programming &amp; Robotics:</strong> C, C++, Python, ROS 2, Gazebo, RViz2, Linux, Git, MATLAB</p>
@@ -275,6 +311,7 @@
         </div>
       </section>
     </div>
+
 
 
     <!-- ================= SUB-PAGE VIEWS (DETAILED WRITE-UPS) ================= -->
@@ -600,6 +637,8 @@
       </button>
     </div>
 
+
+
     <!-- SUB-PAGE 6: DRONE & MECHATRONICS -->
     <div id="page-drone-mechatronics" class="project-subpage hidden">
       <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
@@ -643,34 +682,6 @@
 
   </main>
 
-  <script>
-    function openProject(projectId) {
-      window.location.hash = projectId;
-    }
-
-    function goHome() {
-      window.location.hash = '';
-    }
-
-    function handleRoute() {
-      const hash = window.location.hash.replace('#', '');
-      const homeView = document.getElementById('home-view');
-      const subpages = document.querySelectorAll('.project-subpage');
-
-      subpages.forEach(page => page.classList.add('hidden'));
-
-      if (hash && document.getElementById('page-' + hash)) {
-        homeView.classList.add('hidden');
-        document.getElementById('page-' + hash).classList.remove('hidden');
-        window.scrollTo(0, 0);
-      } else {
-        homeView.classList.remove('hidden');
-        window.scrollTo(0, 0);
-      }
-    }
-
-    window.addEventListener('hashchange', handleRoute);
-    window.addEventListener('DOMContentLoaded', handleRoute);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
