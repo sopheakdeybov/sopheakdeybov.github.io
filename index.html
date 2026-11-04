@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class = "scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sopheakdey (Dey) Bov | Engineering Portfolio</title>
-  <meta name="description" content="Engineering portfolio of Sopheakdey (Dey) Bov — Electrical and Computer Engineering at the University of Rochester." />
+  <meta name="description"
+    content="Engineering portfolio of Sopheakdey (Dey) Bov — Electrical and Computer Engineering at the University of Rochester." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="antialiased selection:bg-blue-100 selection:text-blue-900">
- 
+
   <!-- ================= FIXED NAVIGATION BAR ================= -->
   <nav class="sticky top-0 z-50 bg-[#fafafa]/80 backdrop-blur-md border-b border-zinc-200">
     <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" onclick="goHome(); return false;" class="font-bold text-zinc-900 hover:text-blue-600 transition-colors">Sopheakdey Bov</a>
+      <a href="#" onclick="goHome(); return false;"
+        class="font-bold text-zinc-900 hover:text-blue-600 transition-colors">Sopheakdey Bov</a>
       <div class="flex gap-4 sm:gap-6 text-sm font-medium text-zinc-600">
         <a href="#" onclick="goHome(); return false;" class="hover:text-blue-600 transition-colors">Home</a>
         <a href="#experiences" class="hover:text-blue-600 transition-colors">Experiences</a>
@@ -31,8 +35,9 @@
     <!-- ================= HOME VIEW ================= -->
     <div id="home-view" class="scroll-mt-28">
       <!-- Header & Quick Intro -->
-      <header class="border-b border-zinc-200 pb-8 mb-10 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-8">
-        
+      <header
+        class="border-b border-zinc-200 pb-8 mb-10 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-8">
+
         <!-- Left Column: Text & Links -->
         <div class="max-w-2xl">
           <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
@@ -43,13 +48,19 @@
           </p>
 
           <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
-              I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous motion planning. My work spans from building modular hardware and power electronics in KiCad to developing C++ and ROS2 systems for robotics applications like motion planning and manipulator control. I also do enjoy the hardware side of things like wiring and debugging systems, soldering components, and writing low-level code for motor, actuator, and encoder interfaces.
+            I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous
+            motion planning. My work spans from building modular hardware and power electronics in KiCad to developing
+            C++ and ROS2 systems for robotics applications like motion planning and manipulator control. I also do enjoy
+            the hardware side of things like wiring and debugging systems, soldering components, and writing low-level
+            code for motor, actuator, and encoder interfaces.
           </p>
           <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
-              Outside of academics, I do enjoy balancing being inside watching shows and also being outdoors hiking, playing sports, and rock climbing.
+            Outside of academics, I do enjoy balancing being inside watching shows and also being outdoors hiking,
+            playing sports, and rock climbing.
           </p>
-          <p class = "mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
-              I am currently seeking full-time opportunities in embedded systems, robotics, and electrical engineering for Summer 2027 and beyond. Please feel free to reach out via email or LinkedIn!
+          <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
+            I am currently seeking full-time opportunities in embedded systems, robotics, and electrical engineering for
+            Summer 2027 and beyond. Please feel free to reach out via email or LinkedIn!
           </p>
 
 
@@ -57,9 +68,11 @@
           <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-blue-600">
             <a href="mailto:sbov@u.rochester.edu" class="hover:underline">sbov@u.rochester.edu</a>
             <span class="text-zinc-300">&bull;</span>
-            <a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener" class="hover:underline">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener"
+              class="hover:underline">LinkedIn</a>
             <span class="text-zinc-300">&bull;</span>
-            <a href="https://canva.link/m6uo72muz9tcho7" target="_blank" rel="noopener" class="hover:underline">Hardware Photo Slides</a>
+            <a href="https://canva.link/m6uo72muz9tcho7" target="_blank" rel="noopener" class="hover:underline">Hardware
+              Photo Slides</a>
             <span class="text-zinc-300">&bull;</span>
             <span class="text-zinc-600 font-normal">(585) 957-5196</span>
           </div>
@@ -67,11 +80,8 @@
 
         <!-- Right Column: Profile Picture -->
         <div class="shrink-0">
-          <img 
-            src="images/profile.JPG" 
-            alt="Sopheakdey (Dey) Bov" 
-            class="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] object-cover border border-zinc-200 shadow-sm bg-zinc-100"
-          />
+          <img src="images/profile.JPG" alt="Sopheakdey (Dey) Bov"
+            class="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] object-cover border border-zinc-200 shadow-sm bg-zinc-100" />
         </div>
 
       </header>
@@ -83,10 +93,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <!-- Experience 1: Nicslab Internship -->
-          <article onclick="openProject('nicslab')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('nicslab')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY</span>
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Nicslab Ops, Inc. &bull;
+                  Rochester, NY</span>
                 <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
               </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
@@ -96,7 +108,9 @@
                 Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
               </p>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in replacement costs. Established a Factory Acceptance Testing (FAT) facility from scratch with high-precision DMMs and configured headless SSH diagnostics.
+                Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in
+                replacement costs. Established a Factory Acceptance Testing (FAT) facility from scratch with
+                high-precision DMMs and configured headless SSH diagnostics.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -110,10 +124,12 @@
           </article>
 
           <!-- Experience 2: Summer Research RAIL -->
-          <article onclick="openProject('rail-research')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('rail-research')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">RAIL Lab (Prof. Thomas Howard)</span>
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">RAIL Lab (Prof. Thomas
+                  Howard)</span>
                 <span class="text-xs text-zinc-500 shrink-0">May 2026 – Aug 2026</span>
               </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
@@ -123,7 +139,9 @@
                 Kinodynamic Multi-Robot Motion Planning with State Lattices
               </p>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Built a C++ ROS 2 kinodynamic motion planning package for a Clearpath Husky rover. Developed an offline state-lattice generator using a Model-Predictive Trajectory Generation (MPTG) shooting method and accelerated online A* obstacle checks using 64-bit bitmask collision detection in RViz2.
+                Built a C++ ROS 2 kinodynamic motion planning package for a Clearpath Husky rover. Developed an offline
+                state-lattice generator using a Model-Predictive Trajectory Generation (MPTG) shooting method and
+                accelerated online A* obstacle checks using 64-bit bitmask collision detection in RViz2.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -140,17 +158,20 @@
       </section>
 
       <!-- Projects Grid Section -->
-      <section id="projects" class = "scroll-mt-20">
+      <section id="projects" class="scroll-mt-20">
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Projects</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <!-- Project 1: Senior Design (In Progress) -->
-          <article onclick="openProject('senior-design')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('senior-design')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-center justify-between gap-2 mb-1.5">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Senior Design Capstone (Ideation Stage)</span>
-                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Senior Design Capstone
+                  (Ideation Stage)</span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                   In Progress
                 </span>
@@ -159,7 +180,9 @@
                 Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping. Architecting power electronics, custom  distribution and driver PCBs, embedded control firmware, and ROS 2 mapping pipeline.
+                Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping.
+                Architecting power electronics, custom distribution and driver PCBs, embedded control firmware, and ROS
+                2 mapping pipeline.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -173,17 +196,23 @@
           </article>
 
           <!-- Project 2: UR Robotics -->
-          <article onclick="openProject('ur-robotics')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('ur-robotics')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">UR Robotics Club</span>
                 <span class="text-xs text-zinc-500 shrink-0">Mar 2024 – Present</span>
               </div>
+
+
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
                 Modular Rover Architecture, Custom PCBs &amp; Control Systems
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Overhauled the rover's electrical system from a single wire-congested box into a distributed modular architecture. Designed custom Corner and Middle PCBs in KiCad integrating Teensy 4.1 microcontrollers, H-bridge motor drivers, and linear actuator relays, paired with a 115200-baud C++ ROS UART teleoperation pipeline and Gazebo localization.
+                Overhauled the rover's electrical system from a single wire-congested box into a distributed modular
+                architecture. Designed custom Corner and Middle PCBs in KiCad integrating Teensy 4.1 microcontrollers,
+                H-bridge motor drivers, and linear actuator relays, paired with a 115200-baud C++ ROS UART teleoperation
+                pipeline and Gazebo localization.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -197,7 +226,8 @@
           </article>
 
           <!-- Project 3: LoRa Tracker -->
-          <article onclick="openProject('lora-tracker')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('lora-tracker')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Embedded RF Project</span>
@@ -207,7 +237,9 @@
                 Off-Grid LoRa Digital Contact Tracker &amp; Telemetry GUI
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Built an off-grid bidirectional GPS tracking and telemetry system achieving a validated 3.2 km range across urban environments. Implemented Stop-and-Wait ARQ and Hamming Forward Error Correction alongside a real-time Python map GUI and CLI logger.
+                Built an off-grid bidirectional GPS tracking and telemetry system achieving a validated 3.2 km range
+                across urban environments. Implemented Stop-and-Wait ARQ and Hamming Forward Error Correction alongside
+                a real-time Python map GUI and CLI logger.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -221,17 +253,21 @@
           </article>
 
           <!-- Project 4: 6-DOF Robotic Arm -->
-          <article onclick="openProject('robotic-arm')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('robotic-arm')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Robotics &amp; Kinematics</span>
+                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Robotics &amp;
+                  Kinematics</span>
                 <span class="text-xs text-zinc-500 shrink-0">ROS 2 / C++</span>
               </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
                 6-DOF Robotic Arm Inverse Kinematics Control System
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Developed a 6-degree-of-freedom spherical wrist manipulator control system in C++ and ROS 2. Wrote a Jacobian-based inverse kinematics solver using Eigen and unit quaternions to avoid Gimbal lock and reach 3D target poses with near-zero error (norm &lt; 0.0001).
+                Developed a 6-degree-of-freedom spherical wrist manipulator control system in C++ and ROS 2. Wrote a
+                Jacobian-based inverse kinematics solver using Eigen and unit quaternions to avoid Gimbal lock and reach
+                3D target poses with near-zero error (norm &lt; 0.0001).
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -245,7 +281,8 @@
           </article>
 
           <!-- Project 5: Drone & PIC32 Mechatronics -->
-          <article onclick="openProject('drone-mechatronics')" class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+          <article onclick="openProject('drone-mechatronics')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <div class="flex items-baseline justify-between gap-2 mb-1">
                 <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Power &amp; Control</span>
@@ -255,7 +292,9 @@
                 RF Drone Power System &amp; PIC32 Closed-Loop Motor Control
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Designed a 4S (14.8V, 800W) low-EMI power distribution system for an STM32 F4 quadcopter (under Prof. Hui Wu) and engineered an interrupt-driven PI position controller on a PIC32MX microcontroller using quadrature encoders and 10-bit PWM H-bridge drivers.
+                Designed a 4S (14.8V, 800W) low-EMI power distribution system for an STM32 F4 quadcopter (under Prof.
+                Hui Wu) and engineered an interrupt-driven PI position controller on a PIC32MX microcontroller using
+                quadrature encoders and 10-bit PWM H-bridge drivers.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -277,7 +316,7 @@
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Teaching &amp; Leadership</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
+
           <!-- Teaching Assistant -->
           <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
@@ -286,9 +325,14 @@
             </div>
             <p class="text-xs font-medium text-blue-600 mb-3">University of Rochester</p>
             <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
-              <li><strong>ECE 216 (Mechatronics &amp; Embedded Systems):</strong> Facilitate lab sessions guiding students through Arduino hardware integration, timer interrupts, motor controls, and SPI communication.</li>
-              <li><strong>ECE 113 (Circuits &amp; Signals):</strong> Lead problem-solving workshops covering more advanced version of topics from 101, introducing frequency domain of time signals, phasor, and non linear circuit analysis using loadlines.</li>
-              <li><strong>ECE 101 (Introduction to Electrical and Computer Engineering):</strong> Lead problem-solving workshops for 40+ students covering fundamental circuitry, logic design, and signals.</li>
+              <li><strong>ECE 216 (Mechatronics &amp; Embedded Systems):</strong> Facilitate lab sessions guiding
+                students through Arduino hardware integration, timer interrupts, motor controls, and SPI communication.
+              </li>
+              <li><strong>ECE 113 (Circuits &amp; Signals):</strong> Lead problem-solving workshops covering more
+                advanced version of topics from 101, introducing frequency domain of time signals, phasor, and non
+                linear circuit analysis using loadlines.</li>
+              <li><strong>ECE 101 (Introduction to Electrical and Computer Engineering):</strong> Lead problem-solving
+                workshops for 40+ students covering fundamental circuitry, logic design, and signals.</li>
             </ul>
           </div>
 
@@ -300,8 +344,10 @@
             </div>
             <p class="text-xs font-medium text-blue-600 mb-3">UNICEF "Generation Future" &bull; Cambodia</p>
             <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
-              <li>Secured a $2,000 UNICEF grant by authoring a detailed project proposal to fund STEM education outreach.</li>
-              <li>Organized and led 6 hands-on workshops across two provinces for 200+ young women, teaching mechanical advantage and engineering fundamentals.</li>
+              <li>Secured a $2,000 UNICEF grant by authoring a detailed project proposal to fund STEM education
+                outreach.</li>
+              <li>Organized and led 6 hands-on workshops across two provinces for 200+ young women, teaching mechanical
+                advantage and engineering fundamentals.</li>
             </ul>
           </div>
 
@@ -313,8 +359,10 @@
         <h2 class="text-base font-bold text-zinc-900 mb-3">Technical Skills</h2>
         <div class="text-sm text-zinc-700 space-y-1.5">
           <p><strong>Programming &amp; Robotics:</strong> C, C++, Python, ROS 2, Gazebo, RViz2, Linux, Git, MATLAB</p>
-          <p><strong>Embedded &amp; Hardware:</strong> KiCad, Altium Designer, STM32, Teensy 4.1, PIC32MX, ESP32, Arduino, MPLAB X, UART, I2C, SPI, CAN Bus</p>
-          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, HSPICE / LTspice, SolidWorks, Solid Edge, Fusion 360, Machining (Lathe/Bandsaw)</p>
+          <p><strong>Embedded &amp; Hardware:</strong> KiCad, Altium Designer, STM32, Teensy 4.1, PIC32MX, ESP32,
+            Arduino, MPLAB X, UART, I2C, SPI, CAN Bus</p>
+          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, HSPICE / LTspice,
+            SolidWorks, Solid Edge, Fusion 360, Machining (Lathe/Bandsaw)</p>
         </div>
       </section>
     </div>
@@ -325,15 +373,18 @@
 
     <!-- SUB-PAGE 0: SENIOR DESIGN (IN PROGRESS) -->
     <div id="page-senior-design" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">ECE 348 Senior Design Capstone &bull; University of Rochester &bull; Sep 2026 – Present</p>
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200">
+            <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">ECE 348 Senior Design Capstone &bull;
+              University of Rochester &bull; Sep 2026 – Present</p>
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
               In Progress
             </span>
@@ -342,14 +393,18 @@
             Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware &bull; <strong>Tech Stack:</strong> KiCad, HSPICE, NVIDIA Jetson, ROS 2, C++, Embedded Microcontrollers
+            <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware &bull; <strong>Tech
+              Stack:</strong> KiCad, HSPICE, NVIDIA Jetson, ROS 2, C++, Embedded Microcontrollers
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Project Overview</h2>
           <p>
-            Inspecting vertical infrastructure and navigating obstructed, multi-plane environments poses a major challenge for conventional ground rovers. For our senior design capstone, we are developing an <strong>autonomous wall-climbing mapping robot</strong> capable of transitioning onto and traversing vertical surfaces while executing real-time 3D terrain mapping.
+            Inspecting vertical infrastructure and navigating obstructed, multi-plane environments poses a major
+            challenge for conventional ground rovers. For our senior design capstone, we are developing an
+            <strong>autonomous wall-climbing mapping robot</strong> capable of transitioning onto and traversing
+            vertical surfaces while executing real-time 3D terrain mapping.
           </p>
         </section>
 
@@ -359,57 +414,78 @@
           <div>
             <h3 class="font-semibold text-zinc-900">1. Power Electronics &amp; Custom KiCad PCB Design</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Architecting a high-current power delivery and regulation system capable of sustaining active wall-adhesion actuators and drive motors simultaneously without inducing brownouts on the compute rails.</li>
-              <li>Simulating analog power stages in <strong>HSPICE</strong> and designing custom power distribution and motor control PCBs in <strong>KiCad</strong> with isolated logic and high-current copper pours.</li>
+              <li>Architecting a high-current power delivery and regulation system capable of sustaining active
+                wall-adhesion actuators and drive motors simultaneously without inducing brownouts on the compute rails.
+              </li>
+              <li>Simulating analog power stages in <strong>HSPICE</strong> and designing custom power distribution and
+                motor control PCBs in <strong>KiCad</strong> with isolated logic and high-current copper pours.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">2. Embedded Firmware &amp; Closed-Loop Locomotion Control</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Developing low-level embedded C/C++ firmware to coordinate drive actuation, adhesion force regulation, and IMU/encoder feedback loops for stable vertical climbing.</li>
-              <li>Implementing deterministic serial communication between the low-level microcontroller and the high-level onboard computer.</li>
+              <li>Developing low-level embedded C/C++ firmware to coordinate drive actuation, adhesion force regulation,
+                and IMU/encoder feedback loops for stable vertical climbing.</li>
+              <li>Implementing deterministic serial communication between the low-level microcontroller and the
+                high-level onboard computer.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">3. NVIDIA Jetson &amp; ROS 2 3D Terrain Mapping</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Integrating an <strong>NVIDIA Jetson</strong> compute module running <strong>ROS 2</strong> to fuse depth/LiDAR and inertial telemetry into a real-time 3D spatial map of vertical and complex surfaces.</li>
+              <li>Integrating an <strong>NVIDIA Jetson</strong> compute module running <strong>ROS 2</strong> to fuse
+                depth/LiDAR and inertial telemetry into a real-time 3D spatial map of vertical and complex surfaces.
+              </li>
             </ul>
           </div>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 1: UR ROBOTICS -->
     <div id="page-ur-robotics" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester Robotics Club (NASA Lunabotics) &bull; Mar 2024 – Present</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester Robotics Club
+            (NASA Lunabotics) &bull; Mar 2024 – Present</p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             Rover Electrical Overhaul, Custom PCB Design &amp; Teleoperation Architecture
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Vice President &amp; Embedded Hardware Lead &bull; <strong>Tech Stack:</strong> KiCad, C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
+            <strong>Role:</strong> Vice President &amp; Embedded Hardware Lead &bull; <strong>Tech Stack:</strong>
+            KiCad, C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Project Overview</h2>
           <p>
-            Large-scale field rovers operate in harsh, high-vibration environments where electrical reliability and ease of debugging determine whether a robot completes its mission. In our 2025 rover iteration, the electrical system relied on a singular electronics box (E-box) that suffered from severe wire congestion and routing complications. Tracing a single loose connection or isolating electromagnetic interference (EMI) between high-current motor lines and logic-level signals required digging through a dense bundle of point-to-point wiring.
+            Large-scale field rovers operate in harsh, high-vibration environments where electrical reliability and ease
+            of debugging determine whether a robot completes its mission. In our 2025 rover iteration, the electrical
+            system relied on a singular electronics box (E-box) that suffered from severe wire congestion and routing
+            complications. Tracing a single loose connection or isolating electromagnetic interference (EMI) between
+            high-current motor lines and logic-level signals required digging through a dense bundle of point-to-point
+            wiring.
           </p>
           <p>
-            For the 2026 design cycle, I led a complete architectural overhaul to transition the rover to an <strong>improved modular electronics system</strong>. By decentralizing the hardware into dedicated <strong>Corner Boards</strong> (for individual wheel drive and steering modules) and a central <strong>Middle Board (Extraction and Deposition Module)</strong>, we eliminated massive cable harnesses, simplified subsystem swaps, and bridged our embedded hardware with a reliable C++ ROS teleoperation and Gazebo localization stack.
+            For the 2026 design cycle, I led a complete architectural overhaul to transition the rover to an
+            <strong>improved modular electronics system</strong>. By decentralizing the hardware into dedicated
+            <strong>Corner Boards</strong> (for individual wheel drive and steering modules) and a central
+            <strong>Middle Board (Extraction and Deposition Module)</strong>, we eliminated massive cable harnesses,
+            simplified subsystem swaps, and bridged our embedded hardware with a reliable C++ ROS teleoperation and
+            Gazebo localization stack.
           </p>
         </section>
 
@@ -417,41 +493,99 @@
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Engineering Contributions</h2>
 
           <div>
-            <h3 class="font-semibold text-zinc-900">1. 2025 vs. 2026 Modular Electrical Overhaul &amp; Power Isolation</h3>
+            <h3 class="font-semibold text-zinc-900">1. 2025 vs. 2026 Modular Electrical Overhaul &amp; Power Isolation
+            </h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Replaced the 2025 singular E-box design with modular, subsystem-specific enclosures and standardized connectors for the 2026 rover.</li>
-              <li>Architected a dual-rail 12V/24V power distribution layout across 4 rover subsystems, electrically isolating high-current DC/BLDC motor drivers and actuators from sensitive 3.3V/5V microcontroller logic to prevent voltage sags and resets.</li>
+              <li>Replaced the 2025 singular E-box design with modular, subsystem-specific enclosures and standardized
+                connectors for the 2026 rover.</li>
+              <li>Architected a dual-rail 12V/24V power distribution layout across 4 rover subsystems, electrically
+                isolating high-current DC/BLDC motor drivers and actuators from sensitive 3.3V/5V microcontroller logic
+                to prevent voltage sags and resets.</li>
             </ul>
+          </div>
+
+          <!-- Side-by-Side Comparison Grid (Best for KiCad Layout vs. Physical PCB)-->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+            <figure>
+              <img src="images/pcb1.webp" alt="KiCad 3D Render of Middle Board"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                KiCad 3D render of the Teensy 4.1 carrier PCB.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/pcb2.webp" alt="Assembled Middle Board on Rover"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                Assembled PCB integrated with the H-bridge driver and relays.
+              </figcaption>
+            </figure>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">2. Custom KiCad PCB Design: Corner Boards &amp; Middle Module</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li><strong>Extraction &amp; Deposition Module PCB (Middle Board):</strong> Designed a custom carrier PCB in KiCad around a <strong>Teensy 4.1</strong> microcontroller. The board directly integrates an <strong>H-bridge driver (EVAL_MC33926)</strong> to control the excavation extraction motor alongside dedicated relay connections and shrouded headers to drive the deposition linear actuators.</li>
-              <li><strong>Modular Corner Drive Boards:</strong> Designed distributed corner PCBs to manage localized steering and drive control at each wheel pod, consolidating encoder feedback, motor driver PWM/direction signals, and board-addressing logic into compact, swappable units.</li>
+              <li><strong>Extraction &amp; Deposition Module PCB (Middle Board):</strong> Designed a custom carrier PCB
+                in KiCad around a <strong>Teensy 4.1</strong> microcontroller. The board directly integrates an
+                <strong>H-bridge driver (EVAL_MC33926)</strong> to control the excavation extraction motor alongside
+                dedicated relay connections and shrouded headers to drive the deposition linear actuators.
+              </li>
+              <li><strong>Modular Corner Drive Boards:</strong> Designed distributed corner PCBs to manage localized
+                steering and drive control at each wheel pod, consolidating encoder feedback, motor driver PWM/direction
+                signals, and board-addressing logic into compact, swappable units.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">3. C++ ROS Teleoperation &amp; UART Serial Pipeline</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Engineered a low-latency C++ ROS teleoperation node utilizing the Linux <code>termios</code> serial library to communicate directly with onboard Teensy 4.1 microcontrollers.</li>
-              <li>Structured deterministic UART command packets transmitted at <strong>115200 baud</strong>, achieving <strong>&gt;95% packet reliability</strong> across all drive, steering, extraction, and deposition motor pipelines during live gamepad teleoperation.</li>
-              <li>Implemented embedded C/C++ firmware handling closed-loop velocity/position control, Hall-effect sensor workarounds for BLDC motors, and safety interlocks.</li>
+              <li>Engineered a low-latency C++ ROS teleoperation node utilizing the Linux <code>termios</code> serial
+                library to communicate directly with onboard Teensy 4.1 microcontrollers.</li>
+              <li>Structured deterministic UART command packets transmitted at <strong>115200 baud</strong>, achieving
+                <strong>&gt;95% packet reliability</strong> across all drive, steering, extraction, and deposition motor
+                pipelines during live gamepad teleoperation.
+              </li>
+              <li>Implemented embedded C/C++ firmware handling closed-loop velocity/position control, Hall-effect sensor
+                workarounds for BLDC motors, and safety interlocks.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">4. Gazebo Simulation &amp; Localization</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Built a Gazebo simulation environment and ROS localization pipeline fusing wheel odometry and IMU data, enabling virtual validation of navigation and state estimation before physical rover deployment.</li>
+              <li>Built a Gazebo simulation environment and ROS localization pipeline fusing wheel odometry and IMU
+                data, enabling virtual validation of navigation and state estimation before physical rover deployment.
+              </li>
             </ul>
           </div>
 
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+            <figure>
+              <img src="images/robotics8.jpg" alt="KiCad 3D Render of Middle Board"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                Assembled PCB integrated with the H-bridge driver.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/robotics4.jpg" alt="Assembled Middle Board on Rover"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                Modified middle board integrated with the Teensy 4.1, H-bridge driver, and Arduino Mega linear actuator
+                relays.
+              </figcaption>
+            </figure>
+          </div>
+
           <div>
-            <h3 class="font-semibold text-zinc-900">5. Rapid Hardware Triage &amp; Emergency Microcontroller Migration</h3>
+            <h3 class="font-semibold text-zinc-900">5. Rapid Hardware Triage &amp; Emergency Microcontroller Migration
+            </h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>When an onboard Teensy 4.1 unexpectedly shorted out prior to a critical test run, I led an emergency on-the-fly hardware and firmware migration to an <strong>Arduino Mega</strong>, remapping pinouts and serial firmware to restore full rover operation under tight time constraints.</li>
+              <li>When an onboard Teensy 4.1 unexpectedly shorted out prior to a critical test run, I led an emergency
+                on-the-fly hardware and firmware migration to an <strong>Arduino Mega</strong>, remapping pinouts and
+                serial firmware to restore full rover operation under tight time constraints.</li>
             </ul>
           </div>
         </section>
@@ -459,42 +593,65 @@
         <section class="space-y-2 text-sm sm:text-base text-zinc-700 leading-relaxed border-t border-zinc-200 pt-5">
           <h2 class="text-lg font-bold text-zinc-900">Results &amp; Impact</h2>
           <ul class="list-disc pl-5 space-y-1">
-            <li>Turned hours of point-to-point wire continuity debugging into rapid plug-and-play board diagnostics.</li>
-            <li>Achieved &gt;95% UART packet delivery at 115200 baud between ROS nodes and embedded motor controllers.</li>
-            <li>Mentored club members in KiCad schematic capture, PCB layout, soldering, and ROS integration as Vice President.</li>
+            <li>Turned hours of point-to-point wire continuity debugging into rapid plug-and-play board diagnostics.
+            </li>
+            <li>Achieved &gt;95% UART packet delivery at 115200 baud between ROS nodes and embedded motor controllers.
+            </li>
+            <li>Mentored club members in KiCad schematic capture, PCB layout, soldering, and ROS integration as Vice
+              President.</li>
           </ul>
         </section>
+
+        <div class="aspect-[9/16] max-w-xs mx-auto my-6">
+          <iframe class="w-full h-full rounded-lg border border-zinc-200"
+            src="https://www.youtube.com/embed/U7JMXRFs9uE" title="Rover teleoperation demo" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 2: SUMMER RESEARCH (RAIL LAB) -->
     <div id="page-rail-research" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">RAIL Lab, University of Rochester &bull; Advisor: Prof. Thomas Howard &bull; May 2026 – Aug 2026</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">RAIL Lab, University of Rochester &bull;
+            Advisor: Prof. Thomas Howard &bull; May 2026 – Aug 2026</p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             Kinodynamic Motion Planning with State Lattices
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Undergraduate Robotics Researcher &bull; <strong>Tech Stack:</strong> C++, ROS 2, RViz2, A* Search, Model-Predictive Trajectory Generation (MPTG), Clearpath Husky
+            <strong>Role:</strong> Undergraduate Robotics Researcher &bull; <strong>Tech Stack:</strong> C++, ROS 2,
+            RViz2, A* Search, Model-Predictive Trajectory Generation (MPTG), Clearpath Husky
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Project Overview</h2>
           <p>
-            Standard grid-based path planners (such as 4-connected or 8-connected A*) assume a robot can rotate in place or execute sharp, discontinuous turns. While effective for point-mass simulations, these paths fail on non-holonomic wheeled platforms like the <strong>Clearpath Husky</strong>, which must obey physical curvature, velocity, and acceleration limits.
+            Standard grid-based path planners (such as 4-connected or 8-connected A*) assume a robot can rotate in place
+            or execute sharp, discontinuous turns. While effective for point-mass simulations, these paths fail on
+            non-holonomic wheeled platforms like the <strong>Clearpath Husky</strong>, which must obey physical
+            curvature, velocity, and acceleration limits.
           </p>
           <p>
-            During my 10-week summer research program in the Robotics and Artificial Intelligence Laboratory (RAIL), I developed a <strong>ROS 2 kinodynamic motion planning package in C++</strong> that bridges discrete graph search and continuous vehicle dynamics. By combining an offline <strong>State Lattice generator</strong> with an online <strong>A* search</strong>, the planner generates smooth, collision-free, and kinematically feasible trajectories through dense obstacle environments.
+            During my 10-week summer research program in the Robotics and Artificial Intelligence Laboratory (RAIL), I
+            developed a <strong>ROS 2 kinodynamic motion planning package in C++</strong> that bridges discrete graph
+            search and continuous vehicle dynamics. By combining an offline <strong>State Lattice generator</strong>
+            with an online <strong>A* search</strong>, the planner generates smooth, collision-free, and kinematically
+            feasible trajectories through dense obstacle environments.
           </p>
         </section>
 
@@ -504,85 +661,110 @@
           <div>
             <h3 class="font-semibold text-zinc-900">1. Offline C++ State Lattice &amp; Motion Primitive Generation</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Built an offline C++ boundary-value problem (BVP) solver utilizing a <strong>Model-Predictive Trajectory Generation (MPTG)</strong> shooting method.</li>
-              <li>Implemented forward kinematics and Jacobian matrix linearization to iteratively adjust control parameters until simulated trajectories converged on exact target lattice endpoints with smooth curvature continuity.</li>
-              <li>Serialized the precomputed library of motion primitives so the online ROS 2 planner could evaluate complex curves in microseconds without solving differential equations at runtime.</li>
+              <li>Built an offline C++ boundary-value problem (BVP) solver utilizing a <strong>Model-Predictive
+                  Trajectory Generation (MPTG)</strong> shooting method.</li>
+              <li>Implemented forward kinematics and Jacobian matrix linearization to iteratively adjust control
+                parameters until simulated trajectories converged on exact target lattice endpoints with smooth
+                curvature continuity.</li>
+              <li>Serialized the precomputed library of motion primitives so the online ROS 2 planner could evaluate
+                complex curves in microseconds without solving differential equations at runtime.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">2. Online A* Search &amp; Occupancy Grid Integration</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Designed a ROS 2 node subscribing to custom <code>nav_msgs/OccupancyGrid</code> costmaps, translating between continuous world coordinates and discrete lattice indices.</li>
-              <li>Implemented an A* graph search that expands valid motion primitive branches from the robot's current pose, scoring candidate trajectories based on arc length, heading alignment, and obstacle clearance.</li>
+              <li>Designed a ROS 2 node subscribing to custom <code>nav_msgs/OccupancyGrid</code> costmaps, translating
+                between continuous world coordinates and discrete lattice indices.</li>
+              <li>Implemented an A* graph search that expands valid motion primitive branches from the robot's current
+                pose, scoring candidate trajectories based on arc length, heading alignment, and obstacle clearance.
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">3. High-Speed 64-Bit Bitmask Collision Checking</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Engineered a <strong>64-bit bitmask collision detection pipeline</strong> that packs occupancy grid cells and pre-rasterized motion primitive footprints into 64-bit integers.</li>
-              <li>Replaced slow cell-by-cell iteration with fast bitwise <code>AND</code> operations, significantly reducing trajectory evaluation latency during online replanning.</li>
+              <li>Engineered a <strong>64-bit bitmask collision detection pipeline</strong> that packs occupancy grid
+                cells and pre-rasterized motion primitive footprints into 64-bit integers.</li>
+              <li>Replaced slow cell-by-cell iteration with fast bitwise <code>AND</code> operations, significantly
+                reducing trajectory evaluation latency during online replanning.</li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold text-zinc-900">4. Real-Time RViz2 Visualization &amp; Validation</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Built custom ROS 2 publishers using <code>visualization_msgs/MarkerArray</code> to render the active state-lattice expansion tree, global trajectory, and robot footprint in RViz2.</li>
-              <li>Validated the planner across multi-obstacle test maps and presented the research poster at the University of Rochester ECE Open House.</li>
+              <li>Built custom ROS 2 publishers using <code>visualization_msgs/MarkerArray</code> to render the active
+                state-lattice expansion tree, global trajectory, and robot footprint in RViz2.</li>
+              <li>Validated the planner across multi-obstacle test maps and presented the research poster at the
+                University of Rochester ECE Open House.</li>
             </ul>
           </div>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 3: NICSLAB INTERNSHIP -->
     <div id="page-nicslab" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY &bull; May 2026 – Aug 2026</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY
+            &bull; May 2026 – Aug 2026</p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Electrical Engineering Intern &bull; <strong>Tech Stack:</strong> Multichannel SMUs, High-Precision DMMs, Oscilloscopes, Linux / SSH
+            <strong>Role:</strong> Electrical Engineering Intern &bull; <strong>Tech Stack:</strong> Multichannel SMUs,
+            High-Precision DMMs, Oscilloscopes, Linux / SSH
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Overview</h2>
           <p>
-            During my summer internship at Nicslab Ops, Inc., I focused on component-level hardware diagnostics, board rework, and Factory Acceptance Testing (FAT) infrastructure for high-density multichannel Source Measure Units (SMUs) and XDAC controller boards used in photonics and semiconductor testing.
+            During my summer internship at Nicslab Ops, Inc., I focused on component-level hardware diagnostics, board
+            rework, and Factory Acceptance Testing (FAT) infrastructure for high-density multichannel Source Measure
+            Units (SMUs) and XDAC controller boards used in photonics and semiconductor testing.
           </p>
         </section>
 
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Engineering Contributions</h2>
           <ul class="list-disc pl-5 space-y-2">
-            <li><strong>Component-Level Fault Triage ($40,000+ Saved):</strong> Diagnosed hardware faults on field-returned multichannel SMU and XDAC boards, isolating and resolving PCB thermal damage, voltage spikes, and inverted current draws to save over $40,000 in replacement hardware costs.</li>
-            <li><strong>Factory Acceptance Testing (FAT) Facility:</strong> Built a comprehensive FAT test station from scratch, integrating high-precision benchtop DMMs, oscilloscopes, and custom calibration fixtures to standardize hardware sign-off prior to shipment.</li>
-            <li><strong>Headless Linux &amp; SSH Diagnostics:</strong> Configured network interfaces and SSH protocols for embedded hardware units, enabling headless device management and automated diagnostic data retrieval.</li>
+            <li><strong>Component-Level Fault Triage ($40,000+ Saved):</strong> Diagnosed hardware faults on
+              field-returned multichannel SMU and XDAC boards, isolating and resolving PCB thermal damage, voltage
+              spikes, and inverted current draws to save over $40,000 in replacement hardware costs.</li>
+            <li><strong>Factory Acceptance Testing (FAT) Facility:</strong> Built a comprehensive FAT test station from
+              scratch, integrating high-precision benchtop DMMs, oscilloscopes, and custom calibration fixtures to
+              standardize hardware sign-off prior to shipment.</li>
+            <li><strong>Headless Linux &amp; SSH Diagnostics:</strong> Configured network interfaces and SSH protocols
+              for embedded hardware units, enabling headless device management and automated diagnostic data retrieval.
+            </li>
           </ul>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 4: LORA TRACKER -->
     <div id="page-lora-tracker" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
@@ -593,28 +775,39 @@
             Off-Grid LoRa Digital Contact Tracker &amp; Telemetry GUI
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Tech Stack:</strong> Heltec ESP32-S3R2, SX1262 LoRa (915 MHz), Quectel L76K GNSS, Python GUI &amp; CLI
+            <strong>Tech Stack:</strong> Heltec ESP32-S3R2, SX1262 LoRa (915 MHz), Quectel L76K GNSS, Python GUI &amp;
+            CLI
           </p>
         </header>
 
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
           <ul class="list-disc pl-5 space-y-2">
-            <li><strong>Long-Range Off-Grid RF Hardware:</strong> Built a bidirectional tracking and data transceiver system using Heltec ESP32-S3R2 microcontrollers, SX1262 915 MHz LoRa radios, and a Quectel L76K GNSS module, achieving a validated <strong>3.2 km communication range</strong> across shadowed urban environments in Rochester.</li>
-            <li><strong>Reliable Packet Protocol (ARQ + Hamming FEC):</strong> Implemented a Stop-and-Wait Automatic Repeat Request (ARQ) protocol paired with Hamming Forward Error Correction (FEC) to guarantee reliable delivery of 240-byte GPS telemetry and 4-bit compressed audio packets despite 11 seconds of on-air latency.</li>
-            <li><strong>Custom Python Map GUI &amp; CLI Dashboard:</strong> Programmed a Python graphical user interface and command-line logger to parse incoming serial packets, render live GPS coordinates and altitude on an interactive campus map, monitor RSSI signal strength, and trigger manual or automated location pings.</li>
+            <li><strong>Long-Range Off-Grid RF Hardware:</strong> Built a bidirectional tracking and data transceiver
+              system using Heltec ESP32-S3R2 microcontrollers, SX1262 915 MHz LoRa radios, and a Quectel L76K GNSS
+              module, achieving a validated <strong>3.2 km communication range</strong> across shadowed urban
+              environments in Rochester.</li>
+            <li><strong>Reliable Packet Protocol (ARQ + Hamming FEC):</strong> Implemented a Stop-and-Wait Automatic
+              Repeat Request (ARQ) protocol paired with Hamming Forward Error Correction (FEC) to guarantee reliable
+              delivery of 240-byte GPS telemetry and 4-bit compressed audio packets despite 11 seconds of on-air
+              latency.</li>
+            <li><strong>Custom Python Map GUI &amp; CLI Dashboard:</strong> Programmed a Python graphical user interface
+              and command-line logger to parse incoming serial packets, render live GPS coordinates and altitude on an
+              interactive campus map, monitor RSSI signal strength, and trigger manual or automated location pings.</li>
           </ul>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
 
     <!-- SUB-PAGE 5: 6-DOF ROBOTIC ARM -->
     <div id="page-robotic-arm" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
@@ -632,14 +825,20 @@
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
           <ul class="list-disc pl-5 space-y-2">
-            <li><strong>6-DOF Manipulator Control:</strong> Built a 6-degree-of-freedom robotic arm control architecture in C++ and ROS 2 to drive a spherical wrist manipulator to exact 3D position and orientation targets.</li>
-            <li><strong>Jacobian Inverse Kinematics &amp; Quaternions:</strong> Wrote a numerical Jacobian-based inverse kinematics solver using the C++ <code>Eigen</code> library and unit quaternions, eliminating Gimbal lock singularities and converging on target poses with near-zero error (<code>norm &lt; 0.0001</code>).</li>
-            <li><strong>Real-Time Trajectory Visualization:</strong> Built a custom ROS 2 joint state publisher for live RViz2 trajectory visualization, optimizing matrix computations to execute well under a 5-second runtime constraint.</li>
+            <li><strong>6-DOF Manipulator Control:</strong> Built a 6-degree-of-freedom robotic arm control architecture
+              in C++ and ROS 2 to drive a spherical wrist manipulator to exact 3D position and orientation targets.</li>
+            <li><strong>Jacobian Inverse Kinematics &amp; Quaternions:</strong> Wrote a numerical Jacobian-based inverse
+              kinematics solver using the C++ <code>Eigen</code> library and unit quaternions, eliminating Gimbal lock
+              singularities and converging on target poses with near-zero error (<code>norm &lt; 0.0001</code>).</li>
+            <li><strong>Real-Time Trajectory Visualization:</strong> Built a custom ROS 2 joint state publisher for live
+              RViz2 trajectory visualization, optimizing matrix computations to execute well under a 5-second runtime
+              constraint.</li>
           </ul>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
@@ -648,41 +847,52 @@
 
     <!-- SUB-PAGE 6: DRONE & MECHATRONICS -->
     <div id="page-drone-mechatronics" class="project-subpage hidden">
-      <button onclick="goHome()" class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
+      <button onclick="goHome()"
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester &bull; Embedded Control &amp; Power Electronics</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester &bull; Embedded
+            Control &amp; Power Electronics</p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             RF Drone Power System &amp; PIC32 Closed-Loop Motor Control
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Tech Stack:</strong> STM32 F4, PIC32MX, MPLAB X IDE, Quadrature Encoders, H-Bridge PWM Drivers, 4S LiPo Power Distribution
+            <strong>Tech Stack:</strong> STM32 F4, PIC32MX, MPLAB X IDE, Quadrature Encoders, H-Bridge PWM Drivers, 4S
+            LiPo Power Distribution
           </p>
         </header>
 
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <div>
-            <h2 class="text-lg font-bold text-zinc-900">1. RF Drone Communication &amp; 800W Power System (Advisor: Prof. Hui Wu)</h2>
+            <h2 class="text-lg font-bold text-zinc-900">1. RF Drone Communication &amp; 800W Power System (Advisor:
+              Prof. Hui Wu)</h2>
             <ul class="list-disc pl-5 mt-2 space-y-1">
-              <li>Architected a 4S (14.8V) power distribution harness delivering up to 800W of peak power to four 2755KV brushless motors while isolating high-current ESC switching lines to minimize electromagnetic interference (EMI) with onboard RF transceivers.</li>
-              <li>Integrated an STM32 F4 flight controller with electronic speed controllers across 20+ critical soldered connections, ensuring mechanical stability and reliable telemetry during flight testing.</li>
+              <li>Architected a 4S (14.8V) power distribution harness delivering up to 800W of peak power to four 2755KV
+                brushless motors while isolating high-current ESC switching lines to minimize electromagnetic
+                interference (EMI) with onboard RF transceivers.</li>
+              <li>Integrated an STM32 F4 flight controller with electronic speed controllers across 20+ critical
+                soldered connections, ensuring mechanical stability and reliable telemetry during flight testing.</li>
             </ul>
           </div>
 
           <div class="pt-2">
             <h2 class="text-lg font-bold text-zinc-900">2. PIC32MX Mechatronics &amp; Closed-Loop Servo Control</h2>
             <ul class="list-disc pl-5 mt-2 space-y-1">
-              <li>Engineered an Interrupt Service Routine (ISR)-driven control system in C on a PIC32MX microcontroller implementing Proportional-Integral (PI) control laws and Euler numerical integration for precise angular positioning of a DC gearmotor.</li>
-              <li>Integrated quadrature encoders for high-resolution position tracking and utilized 10-bit Output Compare PWM and H-bridge drivers to regulate motor torque and velocity.</li>
+              <li>Engineered an Interrupt Service Routine (ISR)-driven control system in C on a PIC32MX microcontroller
+                implementing Proportional-Integral (PI) control laws and Euler numerical integration for precise angular
+                positioning of a DC gearmotor.</li>
+              <li>Integrated quadrature encoders for high-resolution position tracking and utilized 10-bit Output
+                Compare PWM and H-bridge drivers to regulate motor torque and velocity.</li>
             </ul>
           </div>
         </section>
       </article>
 
-      <button onclick="goHome()" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
     </div>
@@ -691,4 +901,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
