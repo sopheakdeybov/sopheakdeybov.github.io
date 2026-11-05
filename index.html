@@ -370,7 +370,6 @@
 
 
     <!-- ================= SUB-PAGE VIEWS (DETAILED WRITE-UPS) ================= -->
-
     <!-- SUB-PAGE 0: SENIOR DESIGN (IN PROGRESS) -->
     <div id="page-senior-design" class="project-subpage hidden">
       <button onclick="goHome()"
@@ -378,7 +377,7 @@
         &larr; Back to portfolio
       </button>
 
-      <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
+      <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl mx-auto">
         <header class="border-b border-zinc-200 pb-5">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">ECE 348 Senior Design Capstone &bull;
@@ -462,10 +461,10 @@
             University of Rochester Robotics Club (NASA Lunabotics) &bull; Mar 2024 – Present
           </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Redesigning a Lunabotics Rover's Electronics
+            Redesigning a Lunabotics Rover’s Electronics
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Vice President &amp; Embedded Hardware Lead (electrical team of [TODO: N people])
+            <strong>Role:</strong> Vice President &amp;nEmbedded Hardware team
             &bull;
             <strong>Tech Stack:</strong> KiCad, C/C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
           </p>
@@ -475,15 +474,18 @@
           <h2 class="text-lg font-bold text-zinc-900">The problem</h2>
           <p>
             At the 2025 Lunabotics competition, our rover ran everything through two electronics boxes, with every
-            motor, driver, and microcontroller wired point to point. When something stopped working, we had to dig
-            through a jungle of wires to find the fault, and that slowed us down every time. It also had a worse
-            failure mode: when the extraction or deposition system jammed, it pulled enough current to reset the
-            microcontroller and end our run.
+            motor, driver, and microcontroller wired point-to-point. When something stopped working, we had to dig
+            through a jungle of wires to find the fault, and that slowed us down every time. It also had a worse failure
+            mode: when the extraction or deposition system jammed, it pulled enough current to reset the microcontroller
+            and end our run.
           </p>
           <p>
-            For 2026 I pushed the team to redesign the electronics as separate boards: one per wheel pod and one for
-            excavation and deposition. A fault now means unplugging a board instead of tracing wires.
-            [TODO: one number, e.g. how long a diagnosis used to take vs. now, or how long a board swap takes.]
+            For 2026, I pushed the team to redesign the electronics as separate boards: one per wheel pod and one for
+            excavation and deposition. A fault now means unplugging a board instead of tracing wires. Last year,
+            diagnosis took so much time because we had to work through a mass of wire to check whether any were
+            incorrectly connected or broken. With this new design, we could quickly tell when a corner stopped working;
+            we knew exactly which module to debug, and wire management, fault checking, and replacing the Teensy took
+            only minutes.
           </p>
         </section>
 
@@ -510,57 +512,66 @@
 
           <p>
             <strong>Middle board (excavation and deposition).</strong> A custom Teensy 4.1 carrier I designed in KiCad.
-            It has an MC33926 H-bridge for the extraction motor, relay outputs and shrouded headers for the
-            [TODO: N] deposition linear actuators. I made a custom board instead of [TODO: breakouts / perfboard]
-            because [TODO: reason, e.g. loose jumpers kept failing under vibration].
+            It has an MC33926 H-bridge for the extraction motor, plus relay outputs and shrouded headers for the one
+            deposition linear actuator and two other extraction linear actuators. I made a custom board instead of using
+            a regular perfboard mainly to keep everything within the main central unit on the box, reduce wiring around
+            the box, and mitigate loose jumpers under vibration during operation.
+
           </p>
 
           <p>
             <strong>Corner boards.</strong> One per wheel pod, handling driving, steering, and encoder inputs. All four
-            run identical firmware and receive the same command from the rover's onboard computer. A DIP switch on
-            each board sets which corner it is, so there is one program to maintain and any board can be swapped
-            into any position.
+            run identical firmware and receive the same command from the rover's onboard computer. A DIP switch on each
+            board sets its corner, so there is one program to maintain and any board can be swapped into any position.
           </p>
 
           <p>
             <strong>Power.</strong> The rover runs on separate 12V and 24V rails, and the motor drivers are kept off the
-            3.3V/5V logic supply. In 2025, when the extraction or deposition system jammed, it pulled enough current
-            to reset the microcontroller and end our run. Separating motor power from logic power keeps a jam from
-            taking the controller down with it.
+            3.3V/5V logic supply. In 2025, when the extraction or deposition system jammed, it pulled enough current to
+            reset the microcontroller and end our run. Separating motor power from logic power keeps a jam from taking
+            the controller down.
+
           </p>
         </section>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">Teleoperation and firmware</h2>
           <p>
-            A C++ ROS 2 node reads the gamepad and sends command packets over UART at 115200 baud to the Teensies,
-            using Linux's <code>termios</code> library. [TODO: packet format, e.g. N bytes with a checksum, and what
-            the rover does if packets stop arriving.]
+            A C++ ROS 2 node reads the gamepad and sends command packets over UART at 115200 baud to the Teensies, using
+            Linux's termios library. The commands are structured as newline-terminated strings containing the specific
+            actuation target. To ensure that if the serial connection drops and packets stop arriving, the embedded
+            firmware triggers a timer fail-safe that immediately halts all motors to prevent the rover from moving out
+            of control.
           </p>
           <p>
-            Most of the firmware work was safety logic. The rover won't drive until the steering has aligned, so the
-            wheels don't fight each other [TODO: confirm reason]. The linear actuators use edge-triggered state
-            machines, so [TODO: why, e.g. holding a button doesn't keep toggling the relay].
+            The commands sent from the controller to these microcontrollers follow the same format, including actions
+            with their corresponding PWM signals or boolean values, such as drive and steering, and the actuation system
+            for deposition and extraction.
+          </p>
+          <p>
+            Most of the firmware work was safety logic. The rover won’t drive until the steering has aligned, so the
+            wheels don’t fight each other, which would prevent the motor drivers from stalling and pulling massive
+            high-current power spikes that could mess up the circuit board and microcontroller. The linear actuators use
+            edge-triggered state machines, so holding the controller button doesn’t rapidly toggle the relays on and
+            off; this ensures that the system registers only one clean actuation per deliberate button press.
+
           </p>
         </section>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">The Teensy that shorted</h2>
           <p>
-            Before a critical test run, one of the Teensy 4.1s shorted out. [TODO: what you think caused it, even if
-            it's a guess.] With no spare, I moved the rover to an Arduino Mega on the spot: remapping pinouts,
-            re-terminating harness connections, and adapting the serial firmware. The rover was driving again in
-            [TODO: time]. [TODO: what you changed afterward, e.g. carried a spare, added fuses.]
+            This year, however, we also ran into a very big problem of Teensies shorting out just one week before
+            competition days. The main reason we believed that the Teensy was shorting after reading through their
+            datasheet was that the Teensy input signal pins were capable of receiving 3.3V high signals;
           </p>
-        </section>
-
-        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <h2 class="text-lg font-bold text-zinc-900">What I got wrong</h2>
           <p>
-            [TODO: one real mistake from the first board revision and how you fixed it, e.g. a wrong footprint,
-            missing pull-up, or a trace you had to cut. Then one thing you'd change next time, e.g. keyed
-            connectors so a board can't be plugged in backwards.]
-          </p>
+            Since we couldn't order more Teensies in time, we needed replacements, so we chose the readily available
+            Arduino Mega 2560 board from generous donations from our professor. I moved the rover to an Arduino Mega on
+            the spot: remapping pinouts, re-terminating harness connections, and adapting the serial firmware. The rover
+            was driving again in a couple of days of work rewriting the hardware interrupts system to adapt to this
+            microcontroller change.
+
         </section>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
@@ -570,8 +581,10 @@
               progress</span>
           </h2>
           <p>
-            I'm building a Gazebo model of the rover that fuses wheel odometry with IMU data, so the software team
-            can test navigation code before it touches the hardware.
+            I’m building a Gazebo model of the rover that fuses wheel odometry with IMU data, so the software team can
+            test navigation code before it touches the hardware.
+            Right now, the robot Gazebo model uses keyboard teleoperation to simplify our testing framework.
+
           </p>
         </section>
 
@@ -585,15 +598,15 @@
               allowfullscreen></iframe>
           </div>
           <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-            [TODO: what the viewer is watching, e.g. the rover driving under gamepad control at the test site.]
+            The robot first teleoperation running with all Teensy 4.1 microcontrollers.
           </figcaption>
         </figure>
 
         <section class="space-y-2 text-sm sm:text-base text-zinc-700 leading-relaxed border-t border-zinc-200 pt-5">
           <h2 class="text-lg font-bold text-zinc-900">As VP</h2>
           <p>
-            I taught underclassmen KiCad, soldering, and ROS, and coordinated schedules across the mechanical,
-            electrical, and software subteams.
+            I taught underclassmen electronics systems, wiring, soldering, and ROS, and coordinated schedules across the
+            mechanical, electrical, and software subteams.
           </p>
         </section>
       </article>
@@ -688,12 +701,24 @@
             </ul>
           </div>
         </section>
+
+        <!-- Poster, now inside the article -->
+      <figure class="my-6">
+        <a href="images/URAPoster2026.pdf" target="_blank" rel="noopener">
+          <img src="images/Slide1.jpg" alt="Research poster: kinodynamic motion planning with state lattices"
+            class="w-full max-h-[700px] object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+        </a>
+        <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+          Click to open the full-resolution PDF.
+        </figcaption>
+      </figure>
+
       </article>
 
-      <button onclick="goHome()"
-        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to portfolio
-      </button>
+        <button onclick="goHome()"
+          class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+          &larr; Back to portfolio
+        </button>
     </div>
 
     <!-- SUB-PAGE 3: NICSLAB INTERNSHIP -->

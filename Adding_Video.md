@@ -14,3 +14,14 @@
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>
 </div>
+
+<- Adding PDF->
+<figure class="my-6">
+  <a href="docs/rail-poster.pdf" target="_blank" rel="noopener">
+    <img src="images/rail-poster.webp" alt="Research poster: kinodynamic motion planning with state lattices"
+      class="w-full max-h-[700px] object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+  </a>
+  <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+    Click to open the full-resolution PDF.
+  </figcaption>
+</figure>
