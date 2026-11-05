@@ -458,158 +458,144 @@
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester Robotics Club
-            (NASA Lunabotics) &bull; Mar 2024 – Present</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            University of Rochester Robotics Club (NASA Lunabotics) &bull; Mar 2024 – Present
+          </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Rover Electrical Overhaul, Custom PCB Design &amp; Teleoperation Architecture
+            Redesigning a Lunabotics Rover's Electronics
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Vice President &amp; Embedded Hardware Lead &bull; <strong>Tech Stack:</strong>
-            KiCad, C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
+            <strong>Role:</strong> Vice President &amp; Embedded Hardware Lead (electrical team of [TODO: N people])
+            &bull;
+            <strong>Tech Stack:</strong> KiCad, C/C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
           </p>
         </header>
 
         <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <h2 class="text-lg font-bold text-zinc-900">Project Overview</h2>
+          <h2 class="text-lg font-bold text-zinc-900">The problem</h2>
           <p>
-            Large-scale field rovers operate in harsh, high-vibration environments where electrical reliability and ease
-            of debugging determine whether a robot completes its mission. In our 2025 rover iteration, the electrical
-            system relied on a singular electronics box (E-box) that suffered from severe wire congestion and routing
-            complications. Tracing a single loose connection or isolating electromagnetic interference (EMI) between
-            high-current motor lines and logic-level signals required digging through a dense bundle of point-to-point
-            wiring.
+            At the 2025 Lunabotics competition, our rover ran everything through two electronics boxes, with every
+            motor, driver, and microcontroller wired point to point. When something stopped working, we had to dig
+            through a jungle of wires to find the fault, and that slowed us down every time. It also had a worse
+            failure mode: when the extraction or deposition system jammed, it pulled enough current to reset the
+            microcontroller and end our run.
           </p>
           <p>
-            For the 2026 design cycle, I led a complete architectural overhaul to transition the rover to an
-            <strong>improved modular electronics system</strong>. By decentralizing the hardware into dedicated
-            <strong>Corner Boards</strong> (for individual wheel drive and steering modules) and a central
-            <strong>Middle Board (Extraction and Deposition Module)</strong>, we eliminated massive cable harnesses,
-            simplified subsystem swaps, and bridged our embedded hardware with a reliable C++ ROS teleoperation and
-            Gazebo localization stack.
+            For 2026 I pushed the team to redesign the electronics as separate boards: one per wheel pod and one for
+            excavation and deposition. A fault now means unplugging a board instead of tracing wires.
+            [TODO: one number, e.g. how long a diagnosis used to take vs. now, or how long a board swap takes.]
           </p>
         </section>
 
-        <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Engineering Contributions</h2>
-
-          <div>
-            <h3 class="font-semibold text-zinc-900">1. 2025 vs. 2026 Modular Electrical Overhaul &amp; Power Isolation
-            </h3>
-            <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Replaced the 2025 singular E-box design with modular, subsystem-specific enclosures and standardized
-                connectors for the 2026 rover.</li>
-              <li>Architected a dual-rail 12V/24V power distribution layout across 4 rover subsystems, electrically
-                isolating high-current DC/BLDC motor drivers and actuators from sensitive 3.3V/5V microcontroller logic
-                to prevent voltage sags and resets.</li>
-            </ul>
-          </div>
-
-          <!-- Side-by-Side Comparison Grid (Best for KiCad Layout vs. Physical PCB)-->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-            <figure>
-              <img src="images/pcb1.webp" alt="KiCad 3D Render of Middle Board"
-                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
-              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-                KiCad 3D render of the Teensy 4.1 carrier PCB.
-              </figcaption>
-            </figure>
-
-            <figure>
-              <img src="images/pcb2.webp" alt="Assembled Middle Board on Rover"
-                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
-              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-                Assembled PCB integrated with the H-bridge driver and relays.
-              </figcaption>
-            </figure>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-zinc-900">2. Custom KiCad PCB Design: Corner Boards &amp; Middle Module</h3>
-            <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li><strong>Extraction &amp; Deposition Module PCB (Middle Board):</strong> Designed a custom carrier PCB
-                in KiCad around a <strong>Teensy 4.1</strong> microcontroller. The board directly integrates an
-                <strong>H-bridge driver (EVAL_MC33926)</strong> to control the excavation extraction motor alongside
-                dedicated relay connections and shrouded headers to drive the deposition linear actuators.
-              </li>
-              <li><strong>Modular Corner Drive Boards:</strong> Designed distributed corner PCBs to manage localized
-                steering and drive control at each wheel pod, consolidating encoder feedback, motor driver PWM/direction
-                signals, and board-addressing logic into compact, swappable units.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-zinc-900">3. C++ ROS Teleoperation &amp; UART Serial Pipeline</h3>
-            <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Engineered a low-latency C++ ROS teleoperation node utilizing the Linux <code>termios</code> serial
-                library to communicate directly with onboard Teensy 4.1 microcontrollers.</li>
-              <li>Structured deterministic UART command packets transmitted at <strong>115200 baud</strong>, achieving
-                <strong>&gt;95% packet reliability</strong> across all drive, steering, extraction, and deposition motor
-                pipelines during live gamepad teleoperation.
-              </li>
-              <li>Implemented embedded C/C++ firmware handling closed-loop velocity/position control, Hall-effect sensor
-                workarounds for BLDC motors, and safety interlocks.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-zinc-900">4. Gazebo Simulation &amp; Localization</h3>
-            <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Built a Gazebo simulation environment and ROS localization pipeline fusing wheel odometry and IMU
-                data, enabling virtual validation of navigation and state estimation before physical rover deployment.
-              </li>
-            </ul>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-            <figure>
-              <img src="images/robotics8.jpg" alt="KiCad 3D Render of Middle Board"
-                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
-              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-                Assembled PCB integrated with the H-bridge driver.
-              </figcaption>
-            </figure>
-
-            <figure>
-              <img src="images/robotics4.jpg" alt="Assembled Middle Board on Rover"
-                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
-              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-                Modified middle board integrated with the Teensy 4.1, H-bridge driver, and Arduino Mega linear actuator
-                relays.
-              </figcaption>
-            </figure>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-zinc-900">5. Rapid Hardware Triage &amp; Emergency Microcontroller Migration
-            </h3>
-            <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>When an onboard Teensy 4.1 unexpectedly shorted out prior to a critical test run, I led an emergency
-                on-the-fly hardware and firmware migration to an <strong>Arduino Mega</strong>, remapping pinouts and
-                serial firmware to restore full rover operation under tight time constraints.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="space-y-2 text-sm sm:text-base text-zinc-700 leading-relaxed border-t border-zinc-200 pt-5">
-          <h2 class="text-lg font-bold text-zinc-900">Results &amp; Impact</h2>
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Turned hours of point-to-point wire continuity debugging into rapid plug-and-play board diagnostics.
-            </li>
-            <li>Achieved &gt;95% UART packet delivery at 115200 baud between ROS nodes and embedded motor controllers.
-            </li>
-            <li>Mentored club members in KiCad schematic capture, PCB layout, soldering, and ROS integration as Vice
-              President.</li>
-          </ul>
-        </section>
-
-        <div class="aspect-[9/16] max-w-xs mx-auto my-6">
-          <iframe class="w-full h-full rounded-lg border border-zinc-200"
-            src="https://www.youtube.com/embed/U7JMXRFs9uE" title="Rover teleoperation demo" loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+        <!-- Images (keep your existing pair; object-contain so nothing is cropped) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <figure>
+            <img src="images/pcb1.webp" alt="KiCad 3D render of the middle board"
+              class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              KiCad 3D render of the middle board (Teensy 4.1 carrier).
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/pcb2.webp" alt="Assembled middle board"
+              class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              The assembled board with the H-bridge driver and relays.
+            </figcaption>
+          </figure>
         </div>
 
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">What I built</h2>
+
+          <p>
+            <strong>Middle board (excavation and deposition).</strong> A custom Teensy 4.1 carrier I designed in KiCad.
+            It has an MC33926 H-bridge for the extraction motor, relay outputs and shrouded headers for the
+            [TODO: N] deposition linear actuators. I made a custom board instead of [TODO: breakouts / perfboard]
+            because [TODO: reason, e.g. loose jumpers kept failing under vibration].
+          </p>
+
+          <p>
+            <strong>Corner boards.</strong> One per wheel pod, handling driving, steering, and encoder inputs. All four
+            run identical firmware and receive the same command from the rover's onboard computer. A DIP switch on
+            each board sets which corner it is, so there is one program to maintain and any board can be swapped
+            into any position.
+          </p>
+
+          <p>
+            <strong>Power.</strong> The rover runs on separate 12V and 24V rails, and the motor drivers are kept off the
+            3.3V/5V logic supply. In 2025, when the extraction or deposition system jammed, it pulled enough current
+            to reset the microcontroller and end our run. Separating motor power from logic power keeps a jam from
+            taking the controller down with it.
+          </p>
+        </section>
+
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">Teleoperation and firmware</h2>
+          <p>
+            A C++ ROS 2 node reads the gamepad and sends command packets over UART at 115200 baud to the Teensies,
+            using Linux's <code>termios</code> library. [TODO: packet format, e.g. N bytes with a checksum, and what
+            the rover does if packets stop arriving.]
+          </p>
+          <p>
+            Most of the firmware work was safety logic. The rover won't drive until the steering has aligned, so the
+            wheels don't fight each other [TODO: confirm reason]. The linear actuators use edge-triggered state
+            machines, so [TODO: why, e.g. holding a button doesn't keep toggling the relay].
+          </p>
+        </section>
+
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">The Teensy that shorted</h2>
+          <p>
+            Before a critical test run, one of the Teensy 4.1s shorted out. [TODO: what you think caused it, even if
+            it's a guess.] With no spare, I moved the rover to an Arduino Mega on the spot: remapping pinouts,
+            re-terminating harness connections, and adapting the serial firmware. The rover was driving again in
+            [TODO: time]. [TODO: what you changed afterward, e.g. carried a spare, added fuses.]
+          </p>
+        </section>
+
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">What I got wrong</h2>
+          <p>
+            [TODO: one real mistake from the first board revision and how you fixed it, e.g. a wrong footprint,
+            missing pull-up, or a trace you had to cut. Then one thing you'd change next time, e.g. keyed
+            connectors so a board can't be plugged in backwards.]
+          </p>
+        </section>
+
+        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">
+            Simulation <span
+              class="text-xs font-medium text-amber-800 bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5 ml-1 align-middle">In
+              progress</span>
+          </h2>
+          <p>
+            I'm building a Gazebo model of the rover that fuses wheel odometry with IMU data, so the software team
+            can test navigation code before it touches the hardware.
+          </p>
+        </section>
+
+        <!-- Video (test on your deployed site, not file:///) -->
+        <figure class="my-6">
+          <div class="aspect-[9/16] max-w-xs mx-auto">
+            <iframe class="w-full h-full rounded-lg border border-zinc-200"
+              src="https://www.youtube.com/embed/U7JMXRFs9uE" title="Rover driving under gamepad teleoperation"
+              loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+            [TODO: what the viewer is watching, e.g. the rover driving under gamepad control at the test site.]
+          </figcaption>
+        </figure>
+
+        <section class="space-y-2 text-sm sm:text-base text-zinc-700 leading-relaxed border-t border-zinc-200 pt-5">
+          <h2 class="text-lg font-bold text-zinc-900">As VP</h2>
+          <p>
+            I taught underclassmen KiCad, soldering, and ROS, and coordinated schedules across the mechanical,
+            electrical, and software subteams.
+          </p>
+        </section>
       </article>
 
       <button onclick="goHome()"
@@ -779,6 +765,25 @@
             CLI
           </p>
         </header>
+
+        <!-- Side-by-Side Comparison Grid (Best for KiCad Layout vs. Physical PCB)-->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <figure>
+            <img src="images/lora1.jpg" alt="KiCad 3D Render of Middle Board"
+              class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              Main station Lora with integrated GNSS module for live telemetry and location tracking.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/lora2.jpg" alt="Assembled Middle Board on Rover"
+              class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              Remote tracker Lora with integrated GNSS module for live telemetry and location tracking.
+            </figcaption>
+          </figure>
+        </div>
 
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
