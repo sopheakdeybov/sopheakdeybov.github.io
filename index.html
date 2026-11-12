@@ -90,7 +90,7 @@
       <section id="experiences" class="mb-12 scroll-mt-32">
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Experiences</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
           <!-- Experience 1: Nicslab Internship -->
           <article onclick="openProject('nicslab')"
@@ -104,9 +104,6 @@
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
                 Electrical Engineering Intern
               </h3>
-              <p class="text-xs font-medium text-zinc-500 mt-0.5">
-                Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
-              </p>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
                 Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in
                 replacement costs. Established a Factory Acceptance Testing (FAT) facility from scratch with
@@ -135,9 +132,6 @@
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
                 Undergraduate Robotics Researcher
               </h3>
-              <p class="text-xs font-medium text-zinc-500 mt-0.5">
-                Kinodynamic Multi-Robot Motion Planning with State Lattices
-              </p>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
                 Built a C++ ROS 2 kinodynamic motion planning package for a Clearpath Husky rover. Developed an offline
                 state-lattice generator using a Model-Predictive Trajectory Generation (MPTG) shooting method and
@@ -216,11 +210,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">KiCad</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">Teensy 4.1</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">C++ / ROS 2</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -262,11 +256,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">C++</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">ROS 2</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">Eigen</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -275,10 +269,6 @@
           <article onclick="openProject('drone-mechatronics')"
             class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
-              <div class="flex items-baseline justify-between gap-2 mb-1">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Power &amp; Control</span>
-                <span class="text-xs text-zinc-500 shrink-0">Sep 2025 – Jan 2026</span>
-              </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
                 RF Drone Power System &amp; PIC32 Closed-Loop Motor Control
               </h3>
@@ -289,11 +279,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">STM32 F4</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">PIC32MX</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">PI Control</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -303,10 +293,10 @@
 
 
       <!-- Teaching & Leadership Section -->
-      <section id="teaching" class="mt-12 pt-8 border-t border-zinc-200 scroll-mt-20">
+      <section id="teaching" class="mt-12 pt-8 border-t border-zinc-200 scroll-mt-20 items-start">
         <h2 class="text-xl font-bold text-zinc-900 mb-6">Teaching &amp; Leadership</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
           <!-- Teaching Assistant -->
           <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
@@ -327,6 +317,21 @@
             </ul>
           </div>
 
+
+          <!-- UR Robotics (UNICEF) -->
+          <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+              <h3 class="text-base font-semibold text-zinc-900">Vice President UR Robotics</h3>
+              <span class="text-xs text-zinc-500">April 2025 - Present</span>
+            </div>
+            <p class="text-xs font-medium text-blue-600 mb-3">University of Rochester</p>
+            <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
+              <li>Scheduling events, doing outreach emails, and sending out communications regarding Preliminary Design
+                Meetings and other team meetings.</li>
+              <li>Attending club meetings with faculty members.</li>
+            </ul>
+          </div>
+
           <!-- STEM Outreach (UNICEF) -->
           <div class="bg-white rounded-xl border border-zinc-200 p-6 shadow-sm">
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
@@ -341,6 +346,8 @@
                 advantage and engineering fundamentals.</li>
             </ul>
           </div>
+
+
 
         </div>
       </section>
@@ -384,8 +391,10 @@
             Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware &bull; <strong>Tech
-              Stack:</strong> KiCad, HSPICE, NVIDIA Jetson, ROS 2, C++, Embedded Microcontrollers
+            <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware
+          <p class="text-sm text-zinc-600 mt-2">
+            <strong>Tech
+              Stack:</strong> KiCad, HSPICE, ROS 2, C++, Embedded Microcontrollers
           </p>
         </header>
 
@@ -643,8 +652,6 @@
       </div>
 
       <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
-        <h2 class="text-lg font-bold text-zinc-900">What I built</h2>
-
         <button onclick="goHome()"
           class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
           &larr; Back to portfolio
@@ -666,8 +673,11 @@
             Kinodynamic Motion Planning with State Lattices
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Undergraduate Robotics Researcher &bull; <strong>Tech Stack:</strong> C++, ROS 2,
-            RViz2, A* Search, Model-Predictive Trajectory Generation (MPTG), Clearpath Husky
+            <strong>Role:</strong> Undergraduate Robotics Researcher
+          </p>
+          <p class="text-sm text-zinc-600 mt-2">
+            <strong>Tech Stack:</strong> C++, ROS 2,
+            RViz2, A* Search, Model-Predictive Trajectory Generation (MPTG)
           </p>
         </header>
 
@@ -793,7 +803,7 @@
             Nicslab Ops, Inc. &bull; Rochester, NY &bull; May 2026 &ndash; Aug 2026
           </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Instrument Repair &amp; Factory Acceptance Testing
+            Instrument Repair &amp; SMU Diagnostics
           </h1>
           <p class="text-sm text-zinc-600 mt-2">Electrical Engineering Intern</p>
         </header>
@@ -815,6 +825,24 @@
             </p>
           </section>
 
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+            <figure>
+              <img src="images/intern1.jpg" alt="LoRa base station with an external antenna"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                The SMU I was debugging and repairing.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/intern3.jpg" alt="Battery-powered LoRa tracker with a GNSS module"
+                class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+              <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+                Connecting the Raspberry Pi to the SMU for diagnostics and reconfiguration.
+              </figcaption>
+            </figure>
+          </div>
+
           <section class="space-y-1">
             <h2 class="text-base font-semibold text-zinc-900">Rochester test and calibration station</h2>
             <p>
@@ -825,6 +853,14 @@
               programmable digital multimeter.
             </p>
           </section>
+
+          <figure class="my-6">
+            <img src="images/intern2.jpg" alt="Nicslab FAT Testing Station"
+              class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+            <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+              The testing station I helped set up (there was nothing before).
+            </figcaption>
+          </figure>
 
           <section class="space-y-1">
             <h2 class="text-base font-semibold text-zinc-900">Remote diagnostics</h2>
@@ -837,8 +873,23 @@
 
           <p class="border-t border-zinc-200 pt-4">
             I also designed a resistor-grid PCB concept for an interactive heat-map
-            demo and compiled an equipment list for field troubleshooting.
+            demo(althogh the project was not completed since it was towards the end of my internship and an extra side
+            project).
           </p>
+
+
+          <figure class="my-6">
+            <img src="images/intern_pcb.png" alt="PCB schematic for the resistor-grid demo"
+              class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+          </figure>
+
+          <figure class="my-6">
+            <img src="images/intern_pcb1.png" alt=" PCB schematic for the resistor-grid demo"
+              class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+            <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+              PCB schematic for the resistor-grid demo.
+            </figcaption>
+          </figure>
         </div>
       </article>
 
@@ -857,31 +908,31 @@
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Embedded RF &amp; Telemetry Project</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            Embedded RF &amp; Telemetry Project
+          </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             Off-Grid LoRa Digital Contact Tracker &amp; Telemetry GUI
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Tech Stack:</strong> Heltec ESP32-S3R2, SX1262 LoRa (915 MHz), Quectel L76K GNSS, Python GUI &amp;
-            CLI
+            Heltec ESP32-S3R2 &bull; SX1262 LoRa &bull; Quectel L76K GNSS &bull; Python
           </p>
         </header>
 
-        <!-- Side-by-Side Comparison Grid (Best for KiCad Layout vs. Physical PCB)-->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
           <figure>
-            <img src="images/lora1.jpg" alt="KiCad 3D Render of Middle Board"
+            <img src="images/lora1.jpg" alt="LoRa base station with an external antenna"
               class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
             <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-              Main station Lora with integrated GNSS module for live telemetry and location tracking.
+              Base station with a Heltec ESP32-S3R2 board and an external LoRa antenna.
             </figcaption>
           </figure>
 
           <figure>
-            <img src="images/lora2.jpg" alt="Assembled Middle Board on Rover"
+            <img src="images/lora2.jpg" alt="Battery-powered LoRa tracker with a GNSS module"
               class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
             <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-              Remote tracker Lora with integrated GNSS module for live telemetry and location tracking.
+              Mobile tracker with a Quectel L76K GNSS module and a LiPo battery.
             </figcaption>
           </figure>
         </div>
@@ -889,17 +940,17 @@
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
           <ul class="list-disc pl-5 space-y-2">
-            <li><strong>Long-Range Off-Grid RF Hardware:</strong> Built a bidirectional tracking and data transceiver
-              system using Heltec ESP32-S3R2 microcontrollers, SX1262 915 MHz LoRa radios, and a Quectel L76K GNSS
-              module, achieving a validated <strong>3.2 km communication range</strong> across shadowed urban
-              environments in Rochester.</li>
-            <li><strong>Reliable Packet Protocol (ARQ + Hamming FEC):</strong> Implemented a Stop-and-Wait Automatic
-              Repeat Request (ARQ) protocol paired with Hamming Forward Error Correction (FEC) to guarantee reliable
-              delivery of 240-byte GPS telemetry and 4-bit compressed audio packets despite 11 seconds of on-air
-              latency.</li>
-            <li><strong>Custom Python Map GUI &amp; CLI Dashboard:</strong> Programmed a Python graphical user interface
-              and command-line logger to parse incoming serial packets, render live GPS coordinates and altitude on an
-              interactive campus map, monitor RSSI signal strength, and trigger manual or automated location pings.</li>
+            <li><strong>Our team built and field-tested a bidirectional LoRa GPS tracker</strong> using Heltec
+              ESP32-S3R2 boards with onboard SX1262 radios. The link reached about <strong>3.2 km</strong>
+              in Rochester at spreading factor 12 and 125 kHz bandwidth in the 915 MHz band.</li>
+            <li><strong>Stop-and-wait retries</strong> handled missed acknowledgments, while LoRa's built-in
+              forward error correction helped recover from bit errors. At the long-range settings, a
+              240-byte file chunk took about 11 seconds on air, so our team extended the timeouts to
+              keep file transfers from stalling.</li>
+            <li><strong>I developed the Python map interface</strong> and integrated it with the team's
+              command-line tool for the USB-connected base station. The interface plotted the tracker's
+              GPS position, displayed altitude and signal strength, and supported manual pings,
+              automatic polling, and file transfers.</li>
           </ul>
         </section>
       </article>
@@ -930,33 +981,42 @@
 
 
 
-        <!-- Single Image with Caption (Best for System Diagrams or Bench Setups)-->
+
         <figure class="my-6">
-          <img src="images/arm_control.jpg" alt="6-DOF Robotic Arm Control System"
+          <img src="images/217.png" alt="6-DOF robotic arm model with a spherical wrist"
+            class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+        </figure>
+
+        <figure class="my-6">
+          <img src="images/arm_control.jpg" alt="6-DOF robotic arm model with a spherical wrist"
             class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
           <figcaption class="mt-2 text-xs text-zinc-500 text-center">
-            6-DOF Robotic Arm Control Model.
+            Six-axis arm model used to visualize joint motion in RViz2.
           </figcaption>
         </figure>
+
+
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
           <ul class="list-disc pl-5 space-y-2">
-            <li><strong>6-DOF Manipulator Control:</strong> Built a 6-degree-of-freedom robotic arm control architecture
-              in C++ and ROS 2 to drive a spherical wrist manipulator to exact 3D position and orientation targets.</li>
-            <li><strong>Jacobian Inverse Kinematics &amp; Quaternions:</strong> Wrote a numerical Jacobian-based inverse
-              kinematics solver using the C++ <code>Eigen</code> library and unit quaternions, eliminating Gimbal lock
-              singularities and converging on target poses with near-zero error (<code>norm &lt; 0.0001</code>).</li>
-            <li><strong>Real-Time Trajectory Visualization:</strong> Built a custom ROS 2 joint state publisher for live
-              RViz2 trajectory visualization, optimizing matrix computations to execute well under a 5-second runtime
-              constraint.</li>
+            <li><strong>Built a 6-DOF arm controller</strong> in C++ and ROS 2 for a manipulator with a spherical wrist.
+              A command-line client sends the starting joint angles and target end-effector position and orientation
+              to the control service.</li>
+            <li><strong>Implemented Jacobian-based inverse kinematics</strong> using Denavit&ndash;Hartenberg transforms
+              and a 6&times;6 geometric Jacobian in Eigen. The solver uses position error and quaternion-based
+              orientation error to update the six joint angles.</li>
+            <li><strong>Visualized and tested the arm motion</strong> by publishing intermediate angles on
+              <code>/joint_states</code> for RViz2. The solver converged on the assigned test pose within the
+              project's five-second limit, stopping when the weighted pose error norm fell below
+              <code>0.0001</code>.
+            </li>
           </ul>
         </section>
-      </article>
 
-      <button onclick="goHome()"
-        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to portfolio
-      </button>
+        <button onclick="goHome()"
+          class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+          &larr; Back to portfolio
+        </button>
     </div>
 
 

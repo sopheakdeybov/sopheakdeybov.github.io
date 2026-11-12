@@ -13,28 +13,39 @@
 
 <!-- Side-by-Side Comparison Grid (Best for KiCad Layout vs. Physical PCB)-->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-  <figure>
-    <img 
-      src="assets/middle-pcb-kicad.png" 
-      alt="KiCad 3D Render of Middle Board" 
-      class="w-full h-56 object-cover rounded-lg border border-zinc-200 bg-zinc-100"
-    />
-    <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-      KiCad 3D render of the Teensy 4.1 carrier PCB.
-    </figcaption>
-  </figure>
+          <figure>
+            <img src="images/lora1.jpg" alt="LoRa base station with an external antenna"
+              class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              Base station with a Heltec ESP32-S3R2 board and an external LoRa antenna.
+            </figcaption>
+          </figure>
 
-  <figure>
-    <img 
-      src="assets/middle-pcb-assembled.jpg" 
-      alt="Assembled Middle Board on Rover" 
-      class="w-full h-56 object-cover rounded-lg border border-zinc-200 bg-zinc-100"
-    />
-    <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-      Assembled PCB integrated with the H-bridge driver and relays.
-    </figcaption>
-  </figure>
+          <figure>
+            <img src="images/lora2.jpg" alt="Battery-powered LoRa tracker with a GNSS module"
+              class="w-full max-h-150 object-cover rounded-lg border border-zinc-200 bg-zinc-100" />
+            <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+              Mobile tracker with a Quectel L76K GNSS module and a LiPo battery.
+            </figcaption>
+          </figure>
 </div>
+
+
+
+<!-- Side by side with one common caption-->
+
+<figure class="my-6">
+          <img src="images/217.png" alt="6-DOF robotic arm model with a spherical wrist"
+            class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+        </figure>
+
+        <figure class="my-6">
+          <img src="images/arm_control.jpg" alt="6-DOF robotic arm model with a spherical wrist"
+            class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            Six-axis arm model used to visualize joint motion in RViz2.
+          </figcaption>
+</figure>
 
 <!-- Auto-Playing Loop Video (Best for RViz2 & Gazebo Simulations)-->
 <figure class="my-6">
