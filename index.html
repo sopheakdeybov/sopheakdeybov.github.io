@@ -345,17 +345,18 @@
         </div>
       </section>
 
-      <!-- Compact Technical Skills Footer -->
+      <!-- Compact Technical Skills Footer 
       <section id="skills" class="mt-12 pt-8 border-t border-zinc-200 max-w-3xl scroll-mt-20">
         <h2 class="text-base font-bold text-zinc-900 mb-3">Technical Skills</h2>
         <div class="text-sm text-zinc-700 space-y-1.5">
           <p><strong>Programming &amp; Robotics:</strong> C, C++, Python, ROS 2, Gazebo, RViz2, Linux, Git, MATLAB</p>
           <p><strong>Embedded &amp; Hardware:</strong> KiCad, Altium Designer, STM32, Teensy 4.1, PIC32MX, ESP32,
             Arduino, MPLAB X, UART, I2C, SPI, CAN Bus</p>
-          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, HSPICE / LTspice,
+          <p><strong>Test &amp; Fabrication:</strong> Multichannel SMUs, Oscilloscopes, DMMs, LTspice,
             SolidWorks, Solid Edge, Fusion 360, Machining (Lathe/Bandsaw)</p>
         </div>
       </section>
+      -->
     </div>
 
 
@@ -455,8 +456,9 @@
             Redesigning a Lunabotics Rover’s Electronics
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Vice President &amp;nEmbedded Hardware team
-            &bull;
+            <strong>Role:</strong> Vice President &amp; Embedded Hardware team
+          </p>
+          <p class="text-sm text-zinc-600 mt-1">
             <strong>Tech Stack:</strong> KiCad, C/C++, ROS 2, Gazebo, Teensy 4.1, Arduino Mega, Linux UART (termios)
           </p>
         </header>
@@ -602,10 +604,51 @@
         </section>
       </article>
 
-      <button onclick="goHome()"
-        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-        &larr; Back to portfolio
-      </button>
+
+      <!-- Images (keep your existing pair; object-contain so nothing is cropped) -->
+      <figure class="my-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <img src="images/robotics1.jpg" alt="KiCad 3D render of the middle board"
+            class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+
+          <img src="images/robotics2.jpg" alt="Assembled middle board"
+            class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+        </div>
+
+        <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+          Previous rover electronics box (2025) with all wiring routed through a
+          single box, which made fault diagnosis difficult.
+        </figcaption>
+      </figure>
+
+      <!-- Images (keep your existing pair; object-contain so nothing is cropped) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+        <figure>
+          <img src="images/robotics4.jpg" alt="KiCad 3D render of the middle board"
+            class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+          <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+            Rewriring with arduino Mega 2560 after Teensy 4.1 shorted.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/robotics8.jpg" alt="Assembled middle board"
+            class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+          <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+            Current rover electronics box (2026) with distributed modular architecture, which allows for easier fault
+            diagnosis
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+      <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
+        <h2 class="text-lg font-bold text-zinc-900">What I built</h2>
+
+        <button onclick="goHome()"
+          class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+          &larr; Back to portfolio
+        </button>
     </div>
 
     <!-- SUB-PAGE 2: SUMMER RESEARCH (RAIL LAB) -->
@@ -645,6 +688,22 @@
           </p>
         </section>
 
+        <!-- Images (keep your existing pair; object-contain so nothing is cropped) -->
+        <figure class="my-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <img src="images/research2.png" alt="KiCad 3D render of the middle board"
+              class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+
+            <img src="images/research3.png" alt="Assembled middle board"
+              class="w-full max-h-96 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+          </div>
+
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            Working path planning with custom map on Rviz2 occupancy grid.
+          </figcaption>
+        </figure>
+
+
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Engineering Contributions</h2>
 
@@ -660,6 +719,15 @@
                 complex curves in microseconds without solving differential equations at runtime.</li>
             </ul>
           </div>
+
+          <!-- Single Image with Caption (Best for System Diagrams or Bench Setups)-->
+          <figure class="my-6">
+            <img src="images/research4.png" alt="RAIL Lab Motion Primitive Generation"
+              class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+            <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+              Motion primitives with curves and arcs generated offline.
+            </figcaption>
+          </figure>
 
           <div>
             <h3 class="font-semibold text-zinc-900">2. Online A* Search &amp; Occupancy Grid Integration</h3>
@@ -694,70 +762,87 @@
         </section>
 
         <!-- Poster, now inside the article -->
-      <figure class="my-6">
-        <a href="images/URAPoster2026.pdf" target="_blank" rel="noopener">
-          <img src="images/Slide1.jpg" alt="Research poster: kinodynamic motion planning with state lattices"
-            class="w-full max-h-[700px] object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
-        </a>
-        <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
-          Click to open the full-resolution PDF.
-        </figcaption>
-      </figure>
+        <figure class="my-6">
+          <a href="images/URAPoster2026.pdf" target="_blank" rel="noopener">
+            <img src="images/Slide1.jpg" alt="Research poster: kinodynamic motion planning with state lattices"
+              class="w-full max-h-[700px] object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+          </a>
+          <figcaption class="mt-1.5 text-xs text-zinc-500 text-center">
+            Click to open the full-resolution PDF.
+          </figcaption>
+        </figure>
 
       </article>
 
-        <button onclick="goHome()"
-          class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-          &larr; Back to portfolio
-        </button>
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+        &larr; Back to portfolio
+      </button>
     </div>
 
-    <!-- SUB-PAGE 3: NICSLAB INTERNSHIP -->
+    <!-- SUBPAGE3: NICSLAB INTERNSHIP -->
     <div id="page-nicslab" class="project-subpage hidden">
-      <button onclick="goHome()"
+      <button type="button" onclick="goHome()"
         class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">Nicslab Ops, Inc. &bull; Rochester, NY
-            &bull; May 2026 – Aug 2026</p>
-          <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Multichannel SMU Hardware Diagnostics &amp; FAT Testing Station
-          </h1>
-          <p class="text-sm text-zinc-600 mt-2">
-            <strong>Role:</strong> Electrical Engineering Intern &bull; <strong>Tech Stack:</strong> Multichannel SMUs,
-            High-Precision DMMs, Oscilloscopes, Linux / SSH
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            Nicslab Ops, Inc. &bull; Rochester, NY &bull; May 2026 &ndash; Aug 2026
           </p>
+          <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
+            Instrument Repair &amp; Factory Acceptance Testing
+          </h1>
+          <p class="text-sm text-zinc-600 mt-2">Electrical Engineering Intern</p>
         </header>
 
-        <section class="space-y-3 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <h2 class="text-lg font-bold text-zinc-900">Overview</h2>
+        <div class="space-y-5 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <p>
-            During my summer internship at Nicslab Ops, Inc., I focused on component-level hardware diagnostics, board
-            rework, and Factory Acceptance Testing (FAT) infrastructure for high-density multichannel Source Measure
-            Units (SMUs) and XDAC controller boards used in photonics and semiconductor testing.
+            I diagnosed and repaired returned instruments used in semiconductor and
+            photonics testing, helping avoid an estimated
+            <strong>$40,000 in replacement costs</strong>.
           </p>
-        </section>
 
-        <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <h2 class="text-lg font-bold text-zinc-900">Engineering Contributions</h2>
-          <ul class="list-disc pl-5 space-y-2">
-            <li><strong>Component-Level Fault Triage ($40,000+ Saved):</strong> Diagnosed hardware faults on
-              field-returned multichannel SMU and XDAC boards, isolating and resolving PCB thermal damage, voltage
-              spikes, and inverted current draws to save over $40,000 in replacement hardware costs.</li>
-            <li><strong>Factory Acceptance Testing (FAT) Facility:</strong> Built a comprehensive FAT test station from
-              scratch, integrating high-precision benchtop DMMs, oscilloscopes, and custom calibration fixtures to
-              standardize hardware sign-off prior to shipment.</li>
-            <li><strong>Headless Linux &amp; SSH Diagnostics:</strong> Configured network interfaces and SSH protocols
-              for embedded hardware units, enabling headless device management and automated diagnostic data retrieval.
-            </li>
-          </ul>
-        </section>
+          <section class="space-y-1">
+            <h2 class="text-base font-semibold text-zinc-900">Board diagnostics and repair</h2>
+            <p>
+              I inspected multichannel source-measure unit (SMU) and XDAC boards
+              for thermal damage and isolated channel failures associated with power
+              spikes and current polarity issues. I also traced an XDAC120 GUI
+              connection failure to a failed Raspberry Pi.
+            </p>
+          </section>
+
+          <section class="space-y-1">
+            <h2 class="text-base font-semibold text-zinc-900">Rochester test and calibration station</h2>
+            <p>
+              I helped establish the factory acceptance testing (FAT) station by
+              planning the equipment budget, sourcing bench hardware, and coordinating
+              with the engineering team in Indonesia to obtain calibration and load boards.
+              I proposed specifications for a 400 W programmable power supply and a
+              programmable digital multimeter.
+            </p>
+          </section>
+
+          <section class="space-y-1">
+            <h2 class="text-base font-semibold text-zinc-900">Remote diagnostics</h2>
+            <p>
+              I located the embedded Raspberry Pi controllers on the Ethernet network,
+              accessed them over SSH, and verified their roles in the configuration
+              files so I could troubleshoot the units remotely.
+            </p>
+          </section>
+
+          <p class="border-t border-zinc-200 pt-4">
+            I also designed a resistor-grid PCB concept for an interactive heat-map
+            demo and compiled an equipment list for field troubleshooting.
+          </p>
+        </div>
       </article>
 
-      <button onclick="goHome()"
+      <button type="button" onclick="goHome()"
         class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
         &larr; Back to portfolio
       </button>
@@ -843,6 +928,16 @@
           </p>
         </header>
 
+
+
+        <!-- Single Image with Caption (Best for System Diagrams or Bench Setups)-->
+        <figure class="my-6">
+          <img src="images/arm_control.jpg" alt="6-DOF Robotic Arm Control System"
+            class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            6-DOF Robotic Arm Control Model.
+          </figcaption>
+        </figure>
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
           <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
           <ul class="list-disc pl-5 space-y-2">
