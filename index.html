@@ -71,10 +71,8 @@
             <a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener"
               class="hover:underline">LinkedIn</a>
             <span class="text-zinc-300">&bull;</span>
-            <a href="https://canva.link/m6uo72muz9tcho7" target="_blank" rel="noopener" class="hover:underline">Hardware
-              Photo Slides</a>
-            <span class="text-zinc-300">&bull;</span>
-            <span class="text-zinc-600 font-normal">(585) 957-5196</span>
+
+            <a href="tel:+15859575196" class="hover:underline">(585) 957-5196</a>
           </div>
         </div>
 
@@ -111,11 +109,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">PCB Diagnostics</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">SMUs &amp; DMMs</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">Linux / SSH</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -139,11 +137,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">C++</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">ROS 2</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">RViz2</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -171,7 +169,7 @@
                 </span>
               </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
-                Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
+                Autonomous Wall-Climbing &amp; And Crack and Deformities Detection Robot
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
                 Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping.
@@ -233,11 +231,11 @@
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
-              <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">ESP32-S3</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">LoRa</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">Python GUI</span>
-              </div>
+              </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
@@ -265,28 +263,52 @@
             </div>
           </article>
 
-          <!-- Project 5: Drone & PIC32 Mechatronics -->
-          <article onclick="openProject('drone-mechatronics')"
+
+          <!-- Drone Power & Avionics -->
+          <article onclick="openProject('drone-power')"
             class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
             <div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
-                RF Drone Power System &amp; PIC32 Closed-Loop Motor Control
+                Drone Power Distribution &amp; Avionics
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Designed a 4S (14.8V, 800W) low-EMI power distribution system for an STM32 F4 quadcopter (under Prof.
-                Hui Wu) and engineered an interrupt-driven PI position controller on a PIC32MX microcontroller using
-                quadrature encoders and 10-bit PWM H-bridge drivers.
+                Designed a 4S power distribution harness for an STM32F4 quadcopter,
+                sized for an 800 W peak design load.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
               <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
-                <span class="px-2 py-0.5 bg-zinc-100 rounded">STM32 F4</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">STM32F4</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">4S LiPo</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">Power Distribution</span> 
+              </div>-->
+              <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
+            </div>
+          </article>
+
+          <!-- PIC32 Motor Position Control -->
+          <article onclick="openProject('pic32-control')"
+            class="project-card cursor-pointer rounded-xl border border-zinc-200 bg-white p-6 flex flex-col justify-between shadow-sm">
+            <div>
+              <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
+                PIC32 Motor Position Control
+              </h3>
+              <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
+                Implemented interrupt-driven PI position control for a DC gearmotor
+                using quadrature encoder feedback and an H-bridge.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
+              <!-- <div class="flex flex-wrap gap-1.5 text-xs text-zinc-600">
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">PIC32MX</span>
+                <span class="px-2 py-0.5 bg-zinc-100 rounded">C</span>
                 <span class="px-2 py-0.5 bg-zinc-100 rounded">PI Control</span>
               </div> -->
               <span class="text-sm font-medium text-blue-600 hover:underline shrink-0 ml-2">Read more &rarr;</span>
             </div>
           </article>
+
+
 
         </div>
       </section>
@@ -388,7 +410,7 @@
             </span>
           </div>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            Autonomous Wall-Climbing &amp; 3D Terrain Mapping Robot
+            Autonomous Wall-Climbing &amp; And Crack and Deformities Detection Robot
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
             <strong>Focus:</strong> Power Electronics, Custom PCBs &amp; Embedded Firmware
@@ -953,6 +975,14 @@
               automatic polling, and file transfers.</li>
           </ul>
         </section>
+
+        <figure class="my-6">
+          <img src="images/lora3.png" alt="GUI map interface showing the LoRa tracker position and signal strength"
+            class="w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            The python GUI map interface showing the LoRa tracker position and signal strength.
+          </figcaption>
+        </figure>
       </article>
 
       <button onclick="goHome()"
@@ -1021,8 +1051,8 @@
 
 
 
-    <!-- SUB-PAGE 6: DRONE & MECHATRONICS -->
-    <div id="page-drone-mechatronics" class="project-subpage hidden">
+    <!-- SUB-PAGE: DRONE POWER & AVIONICS -->
+    <div id="page-drone-power" class="project-subpage hidden">
       <button onclick="goHome()"
         class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
@@ -1030,50 +1060,107 @@
 
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
-          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">University of Rochester &bull; Embedded
-            Control &amp; Power Electronics</p>
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            University of Rochester &bull; Independent Study with Prof. Hui Wu
+          </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
-            RF Drone Power System &amp; PIC32 Closed-Loop Motor Control
+            Drone Power Distribution &amp; Avionics
           </h1>
           <p class="text-sm text-zinc-600 mt-2">
-            <strong>Tech Stack:</strong> STM32 F4, PIC32MX, MPLAB X IDE, Quadrature Encoders, H-Bridge PWM Drivers, 4S
-            LiPo Power Distribution
+            STM32F4 &bull; 4S LiPo &bull; Electronic Speed Controllers
           </p>
         </header>
 
         <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
-          <div>
-            <h2 class="text-lg font-bold text-zinc-900">1. RF Drone Communication &amp; 800W Power System (Advisor:
-              Prof. Hui Wu)</h2>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-              <li>Architected a 4S (14.8V) power distribution harness delivering up to 800W of peak power to four 2755KV
-                brushless motors while isolating high-current ESC switching lines to minimize electromagnetic
-                interference (EMI) with onboard RF transceivers.</li>
-              <li>Integrated an STM32 F4 flight controller with electronic speed controllers across 20+ critical
-                soldered connections, ensuring mechanical stability and reliable telemetry during flight testing.</li>
-            </ul>
-          </div>
-
-          <div class="pt-2">
-            <h2 class="text-lg font-bold text-zinc-900">2. PIC32MX Mechatronics &amp; Closed-Loop Servo Control</h2>
-            <ul class="list-disc pl-5 mt-2 space-y-1">
-              <li>Engineered an Interrupt Service Routine (ISR)-driven control system in C on a PIC32MX microcontroller
-                implementing Proportional-Integral (PI) control laws and Euler numerical integration for precise angular
-                positioning of a DC gearmotor.</li>
-              <li>Integrated quadrature encoders for high-resolution position tracking and utilized 10-bit Output
-                Compare PWM and H-bridge drivers to regulate motor torque and velocity.</li>
-            </ul>
-          </div>
+          <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Power distribution.</strong> Designed a 4S LiPo harness
+              (14.8 V nominal) for four brushless motors with an 800 W peak design
+              load. Routed high-current motor wiring separately from RF and telemetry
+              lines to limit interference.</li>
+            <li><strong>Avionics integration.</strong> Integrated the STM32F4
+              flight controller and electronic speed controllers, soldering more than
+              20 connections during preparation for flight testing.</li>
+          </ul>
         </section>
-      </article>
 
+        <!-- Single Image with Caption (Best for System Diagrams or Bench Setups)-->
+        <figure class="my-6">
+          <img src="images/drone1.jpg" alt="assembled drone without its power supply" width="960" height="1280"
+            class="mx-auto block w-auto max-w-full rounded-lg border border-zinc-200 object-cover max-h-96 bg-zinc-100" />
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            Drone fully integrated without power supply.
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+
+    <!-- SUB-PAGE: PIC32 MOTOR POSITION CONTROL -->
+    <div id="page-pic32-control" class="project-subpage hidden">
       <button onclick="goHome()"
-        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+        class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline mb-8">
         &larr; Back to portfolio
       </button>
+
+      <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
+        <header class="border-b border-zinc-200 pb-5">
+          <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            University of Rochester &bull; ECE 216 Mechatronics
+          </p>
+          <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
+            PIC32 Motor Position Control
+          </h1>
+          <p class="text-sm text-zinc-600 mt-2">
+            C &bull; PIC32MX &bull; Quadrature Encoder &bull; H-Bridge
+          </p>
+        </header>
+
+        <section class="space-y-4 text-sm sm:text-base text-zinc-700 leading-relaxed">
+          <h2 class="text-lg font-bold text-zinc-900">System Architecture &amp; Highlights</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Closed-loop control.</strong> Implemented an interrupt-driven
+              proportional-integral (PI) controller in C to position a DC gearmotor
+              at a commanded shaft angle.</li>
+            <li><strong>Encoder feedback and motor drive.</strong> Tracked shaft
+              angle with a quadrature encoder at 0.076&deg; per count. Used 10-bit
+              output-compare PWM to drive the motor through an H-bridge.</li>
+          </ul>
+        </section>
+
+        <!-- Three images with one shared caption -->
+        <figure class="my-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <img src="images/PIC32.png" alt="transient response of the motor position control system"
+              class="w-full h-48 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+
+            <img src="images/PIC33.png" alt="transient response of the motor position control system"
+              class="w-full h-48 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+
+            <img src="images/PIC34.png" alt="transient response of the motor position control system"
+              class="w-full h-48 object-contain rounded-lg border border-zinc-200 bg-zinc-100" />
+          </div>
+
+          <figcaption class="mt-2 text-xs text-zinc-500 text-center">
+            Some transient response plots of the motor position control system, tweaking some of the control parameters to get a better response.
+          </figcaption>
+        </figure>
+      </article>
     </div>
 
   </main>
+
+
+  <footer id="contact" aria-labelledby="contact-heading" class="border-t border-zinc-200 bg-white">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <h2 id="contact-heading" class="text-base font-semibold text-zinc-900">Contact</h2>
+      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-blue-600">
+        <li><a href="mailto:sbov@u.rochester.edu" class="hover:underline">sbov@u.rochester.edu</a></li>
+        <li><a href="https://www.linkedin.com/in/pheakdey-bov/" target="_blank" rel="noopener"
+            class="hover:underline">LinkedIn</a></li>
+        <li><a href="tel:+15859575196" class="hover:underline">(585) 957-5196</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
