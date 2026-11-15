@@ -44,8 +44,9 @@
             Sopheakdey (Dey) Bov
           </h1>
           <p class="mt-2 text-base sm:text-lg text-zinc-600 font-medium">
-            B.S. in Electrical &amp; Computer Engineering &bull; University of Rochester (Expected May 2027)
+            B.S. in Electrical &amp; Computer Engineering
           </p>
+          <p class="mt-2 text-base sm:text-lg text-zinc-600 font-medium">University of Rochester (Expected May 2027)</p>
 
           <p class="mt-4 text-zinc-700 leading-relaxed text-sm sm:text-base">
             I am an electrical and robotics engineer focused on embedded systems, custom PCB design, and autonomous
@@ -77,16 +78,22 @@
         </div>
 
         <!-- Right Column: Profile Picture -->
-        <div class="shrink-0">
-          <img src="images/profile.JPG" alt="Sopheakdey (Dey) Bov"
-            class="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] object-cover border border-zinc-200 shadow-sm bg-zinc-100" />
-        </div>
+        <div class="relative w-full max-w-xs shrink-0">
+          <div aria-hidden="true"
+            class="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl border border-blue-200 bg-blue-50">
+          </div>
 
+          <img src="images/profile.JPG" alt="Sopheakdey Bov"
+            class="relative block aspect-square w-full rounded-2xl border border-zinc-200 object-cover shadow-sm" />
+        </div>
       </header>
 
       <!-- Experiences Grid Section -->
       <section id="experiences" class="mb-12 scroll-mt-32">
-        <h2 class="text-xl font-bold text-zinc-900 mb-6">Experiences</h2>
+        <h2 class="mb-6 flex items-center gap-3 text-xl font-bold text-zinc-900">
+          <span aria-hidden="true" class="h-5 w-1 rounded-full bg-blue-600"></span>
+          Experiences
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
@@ -103,9 +110,8 @@
                 Electrical Engineering Intern
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
-                Diagnosed component-level faults on field-returned multichannel SMU and XDAC boards to save $40,000+ in
-                replacement costs. Established a Factory Acceptance Testing (FAT) facility from scratch with
-                high-precision DMMs and configured headless SSH diagnostics.
+                Diagnosed faults on returned SMU and XDAC boards, helping avoid an estimated $40,000 in replacement
+                costs. Helped establish the factory acceptance test station.
               </p>
             </div>
             <div class="mt-6 pt-4 border-t border-zinc-100 flex items-center justify-between">
@@ -151,7 +157,10 @@
 
       <!-- Projects Grid Section -->
       <section id="projects" class="scroll-mt-20">
-        <h2 class="text-xl font-bold text-zinc-900 mb-6">Projects</h2>
+        <h2 class="mb-6 flex items-center gap-3 text-xl font-bold text-zinc-900">
+          <span aria-hidden="true" class="h-5 w-1 rounded-full bg-blue-600"></span>
+          Projects
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -169,7 +178,7 @@
                 </span>
               </div>
               <h3 class="text-lg font-semibold text-zinc-900 leading-snug">
-                Autonomous Wall-Climbing &amp; And Crack and Deformities Detection Robot
+                Wall-Climbing Robot for Surface Inspection
               </h3>
               <p class="mt-2.5 text-sm text-zinc-700 leading-relaxed line-clamp-3">
                 Developing an autonomous wall-climbing robot for vertical surface locomotion and real-time 3D mapping.
@@ -316,7 +325,10 @@
 
       <!-- Teaching & Leadership Section -->
       <section id="teaching" class="mt-12 pt-8 border-t border-zinc-200 scroll-mt-20 items-start">
-        <h2 class="text-xl font-bold text-zinc-900 mb-6">Teaching &amp; Leadership</h2>
+        <h2 class="mb-6 flex items-center gap-3 text-xl font-bold text-zinc-900">
+          <span aria-hidden="true" class="h-5 w-1 rounded-full bg-blue-600"></span>
+          Teaching &amp; Leadership
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
@@ -364,7 +376,7 @@
             <ul class="list-disc pl-4 text-sm text-zinc-700 space-y-1.5 marker:text-zinc-400">
               <li>Secured a $2,000 UNICEF grant by authoring a detailed project proposal to fund STEM education
                 outreach.</li>
-              <li>Organized and led 6 hands-on workshops across two provinces for 200+ young women, teaching mechanical
+              <li>Organized and led 6 hands-on workshops across two provinces for 150+ young women, teaching mechanical
                 advantage and engineering fundamentals.</li>
             </ul>
           </div>
@@ -455,10 +467,11 @@
           </div>
 
           <div>
-            <h3 class="font-semibold text-zinc-900">3. NVIDIA Jetson &amp; ROS 2 3D Terrain Mapping</h3>
+            <h3 class="font-semibold text-zinc-900">3. On board computer (TBD) &amp; ROS 2 3D Terrain Mapping</h3>
             <ul class="list-disc pl-5 mt-1 space-y-1">
-              <li>Integrating an <strong>NVIDIA Jetson</strong> compute module running <strong>ROS 2</strong> to fuse
-                depth/LiDAR and inertial telemetry into a real-time 3D spatial map of vertical and complex surfaces.
+              <li>Integrating an onboardy computer to compute module running <strong>ROS 2</strong> to fuse
+                depth/visual and inertial telemetry into a real-time map and diagnostics of surface conditions on
+                vertical and complex surfaces.
               </li>
             </ul>
           </div>
@@ -747,8 +760,7 @@
               <li>Implemented forward kinematics and Jacobian matrix linearization to iteratively adjust control
                 parameters until simulated trajectories converged on exact target lattice endpoints with smooth
                 curvature continuity.</li>
-              <li>Serialized the precomputed library of motion primitives so the online ROS 2 planner could evaluate
-                complex curves in microseconds without solving differential equations at runtime.</li>
+              <li>The planner reused precomputed motion primitives without solving the vehicle model at runtime.</li>
             </ul>
           </div>
 
@@ -777,8 +789,7 @@
             <ul class="list-disc pl-5 mt-1 space-y-1">
               <li>Engineered a <strong>64-bit bitmask collision detection pipeline</strong> that packs occupancy grid
                 cells and pre-rasterized motion primitive footprints into 64-bit integers.</li>
-              <li>Replaced slow cell-by-cell iteration with fast bitwise <code>AND</code> operations, significantly
-                reducing trajectory evaluation latency during online replanning.</li>
+              <li>Replaced slow cell-by-cell iteration with fast bitwise <code>AND</code> operations</li>
             </ul>
           </div>
 
@@ -931,7 +942,7 @@
       <article class="bg-white rounded-xl border border-zinc-200 p-6 sm:p-8 shadow-sm space-y-6 max-w-3xl">
         <header class="border-b border-zinc-200 pb-5">
           <p class="text-xs font-medium text-zinc-500 uppercase tracking-wider">
-            Embedded RF &amp; Telemetry Project
+            Embedded RF &amp; Telemetry Project &bull; ECE 245 Wireless Communications &bull; Spring 2026
           </p>
           <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mt-1">
             Off-Grid LoRa Digital Contact Tracker &amp; Telemetry GUI
@@ -1042,11 +1053,11 @@
             </li>
           </ul>
         </section>
-
-        <button onclick="goHome()"
-          class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
-          &larr; Back to portfolio
-        </button>
+      </article>
+      <button onclick="goHome()"
+        class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:underline">
+        &larr; Back to portfolio
+      </button>
     </div>
 
 
@@ -1141,7 +1152,8 @@
           </div>
 
           <figcaption class="mt-2 text-xs text-zinc-500 text-center">
-            Some transient response plots of the motor position control system, tweaking some of the control parameters to get a better response.
+            Some transient response plots of the motor position control system, tweaking some of the control parameters
+            to get a better response.
           </figcaption>
         </figure>
       </article>

@@ -17,3 +17,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.portrait-grid {
+  background-image: radial-gradient(#93c5fd 1px, transparent 1px);
+  background-size: 12px 12px;
+}
